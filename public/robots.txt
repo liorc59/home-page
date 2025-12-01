@@ -1,3 +1,9 @@
-# https://www.robotstxt.org/robotstxt.html
+# robots.txt for MiAmar
 User-agent: *
-Disallow:
+Allow: /
+
+# Sitemaps
+Sitemap: https://miamar.io/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
