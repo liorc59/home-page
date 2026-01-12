@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   Box,
   Container,
@@ -13,12 +14,30 @@ import { Link as RouterLink } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 
 const PrivacyPage = () => {
-  useEffect(() => {
-    document.title = 'Privacy Policy | MiAmar - AI-Powered Sales Intelligence';
-  }, []);
-
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
+    <>
+      <Helmet>
+        <title>Privacy Policy | MiAmar - AI-Powered Sales Intelligence</title>
+        <meta name="description" content="Learn how MiAmar collects, uses, and protects your personal information. Our privacy policy covers data security, your rights, and our commitment to transparency." />
+        <link rel="canonical" href="https://miamar.io/privacy" />
+        <meta property="og:title" content="Privacy Policy | MiAmar" />
+        <meta property="og:description" content="Learn how MiAmar protects your privacy and handles your data responsibly." />
+        <meta property="og:url" content="https://miamar.io/privacy" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Privacy Policy | MiAmar" />
+        <meta name="twitter:description" content="Learn how MiAmar protects your privacy and handles your data responsibly." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://miamar.io/" },
+              { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://miamar.io/privacy" }
+            ]
+          })}
+        </script>
+      </Helmet>
+      <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ bgcolor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)' }}>
         <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1200, width: '100%', mx: 'auto', px: { xs: 2, md: 4 } }}>
@@ -42,7 +61,7 @@ const PrivacyPage = () => {
 
       {/* Content */}
       <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: '#0f172a', mb: 2 }}>
+        <Typography variant="h1" sx={{ fontWeight: 800, color: '#0f172a', mb: 2, fontSize: { xs: '2rem', md: '2.5rem' } }}>
           Privacy Policy
         </Typography>
         <Typography variant="body2" sx={{ color: '#64748b', mb: 4 }}>
@@ -212,6 +231,7 @@ const PrivacyPage = () => {
         </Container>
       </Box>
     </Box>
+    </>
   );
 };
 

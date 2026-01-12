@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import {
   Box,
   Container,
@@ -13,12 +14,30 @@ import { Link as RouterLink } from 'react-router-dom';
 import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 
 const TermsPage = () => {
-  useEffect(() => {
-    document.title = 'Terms & Conditions | MiAmar - AI-Powered Sales Intelligence';
-  }, []);
-
   return (
-    <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
+    <>
+      <Helmet>
+        <title>Terms & Conditions | MiAmar - AI-Powered Sales Intelligence</title>
+        <meta name="description" content="Read MiAmar's terms and conditions. Learn about acceptable use, beta services, intellectual property, limitations of liability, and your rights when using our AI-powered sales tools." />
+        <link rel="canonical" href="https://miamar.io/terms" />
+        <meta property="og:title" content="Terms & Conditions | MiAmar" />
+        <meta property="og:description" content="Terms and conditions for using MiAmar's AI-powered sales intelligence services." />
+        <meta property="og:url" content="https://miamar.io/terms" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:title" content="Terms & Conditions | MiAmar" />
+        <meta name="twitter:description" content="Terms and conditions for using MiAmar's AI-powered sales intelligence services." />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://miamar.io/" },
+              { "@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://miamar.io/terms" }
+            ]
+          })}
+        </script>
+      </Helmet>
+      <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ bgcolor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)' }}>
         <Toolbar sx={{ justifyContent: 'space-between', maxWidth: 1200, width: '100%', mx: 'auto', px: { xs: 2, md: 4 } }}>
@@ -42,7 +61,7 @@ const TermsPage = () => {
 
       {/* Content */}
       <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
-        <Typography variant="h2" sx={{ fontWeight: 800, color: '#0f172a', mb: 2 }}>
+        <Typography variant="h1" sx={{ fontWeight: 800, color: '#0f172a', mb: 2, fontSize: { xs: '2rem', md: '2.5rem' } }}>
           Terms & Conditions
         </Typography>
         <Typography variant="body2" sx={{ color: '#64748b', mb: 4 }}>
@@ -182,6 +201,7 @@ const TermsPage = () => {
         </Container>
       </Box>
     </Box>
+    </>
   );
 };
 
