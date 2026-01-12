@@ -30,11 +30,11 @@ const HomePage = () => {
   return (
     <>
       <SEO
-        title="MiAmar - AI-Powered Sales Intelligence | Meeting Prep & Competitive Intelligence"
-        description="MiAmar provides AI-powered sales intelligence tools. Meeting Prep generates personalized briefs and talking points in 60 seconds. Win more deals with AI."
+        title="MiAmar | AI Sales Intelligence & Meeting Prep Tools"
+        description="Prepare for sales meetings in 60 seconds with AI-generated briefs, talking points, and competitive insights. Try MiAmar Meeting Prep free today."
         canonicalUrl="https://miamar.io/"
-        ogTitle="MiAmar - AI-Powered Sales Intelligence"
-        ogDescription="Win more deals with AI-powered meeting preparation and competitive intelligence. Generate personalized briefs and real-time market insights."
+        ogTitle="MiAmar - AI Sales Intelligence Tools"
+        ogDescription="Get meeting-ready in 60 seconds. AI-generated briefs, talking points, and competitive insights for sales teams."
         ogUrl="https://miamar.io/"
         breadcrumbs={[{ name: "Home", url: "https://miamar.io/" }]}
       />
@@ -60,6 +60,12 @@ const HomePage = () => {
             </Link>
             <Link href="#contact" underline="none" sx={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem', '&:hover': { color: '#1e40af' } }}>
               Contact
+            </Link>
+            <Link component={RouterLink} to="/terms" underline="none" sx={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem', '&:hover': { color: '#1e40af' }, display: { xs: 'none', md: 'block' } }}>
+              Terms
+            </Link>
+            <Link component={RouterLink} to="/privacy" underline="none" sx={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem', '&:hover': { color: '#1e40af' }, display: { xs: 'none', md: 'block' } }}>
+              Privacy
             </Link>
             <Button
               variant="contained"
@@ -105,9 +111,9 @@ const HomePage = () => {
               mb: 3,
               lineHeight: 1.2
             }}>
-              Sales Intelligence,{' '}
+              AI Sales Intelligence &{' '}
               <Box component="span" sx={{ background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-                Simplified
+                Meeting Prep Tools
               </Box>
             </Typography>
             <Typography variant="h5" sx={{
@@ -212,7 +218,7 @@ const HomePage = () => {
                       <SpeedIcon sx={{ fontSize: 32, color: '#1e40af' }} />
                     </Box>
                     <Box>
-                      <Typography variant="h4" sx={{ color: '#0f172a', fontSize: '1.5rem' }}>
+                      <Typography variant="h3" sx={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: 700 }}>
                         Meeting Prep
                       </Typography>
                       <Chip label="Beta" size="small" sx={{ bgcolor: '#dbeafe', color: '#1e40af', fontWeight: 600, mt: 0.5 }} />
@@ -287,7 +293,7 @@ const HomePage = () => {
                       <ScienceIcon sx={{ fontSize: 32, color: '#7c3aed' }} />
                     </Box>
                     <Box>
-                      <Typography variant="h4" sx={{ color: '#0f172a', fontSize: '1.5rem' }}>
+                      <Typography variant="h3" sx={{ color: '#0f172a', fontSize: '1.5rem', fontWeight: 700 }}>
                         Arena
                       </Typography>
                       <Chip label="Alpha" size="small" sx={{ bgcolor: '#f3e8ff', color: '#7c3aed', fontWeight: 600, mt: 0.5 }} />
@@ -338,7 +344,7 @@ const HomePage = () => {
       }}>
         <Container maxWidth="lg">
           <Box sx={{ textAlign: 'center' }}>
-            <Typography variant="h4" sx={{ color: 'white', fontWeight: 700, mb: 2 }}>
+            <Typography variant="h2" sx={{ color: 'white', fontWeight: 700, mb: 2, fontSize: { xs: '1.5rem', md: '2rem' } }}>
               Free Beta - Limited Time
             </Typography>
             <Typography variant="body1" sx={{ color: 'rgba(255,255,255,0.9)', mb: 3, maxWidth: 600, mx: 'auto' }}>
@@ -414,7 +420,7 @@ const HomePage = () => {
 
             <Grid item xs={12} md={6}>
               <Card sx={{ p: 4, borderRadius: 4, boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }}>
-                <Typography variant="h5" sx={{ color: '#0f172a', fontWeight: 700, mb: 3 }}>
+                <Typography variant="h3" sx={{ color: '#0f172a', fontWeight: 700, mb: 3, fontSize: '1.25rem' }}>
                   Request Arena Alpha Access
                 </Typography>
                 <Typography variant="body2" sx={{ color: '#64748b', mb: 3 }}>
@@ -445,32 +451,49 @@ const HomePage = () => {
       <Box sx={{ py: 6, bgcolor: '#0f172a' }}>
         <Container maxWidth="lg">
           <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={6}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
                 <Typography variant="h6" sx={{ fontWeight: 800, color: 'white' }}>
                   MiAmar
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={{ color: '#94a3b8', lineHeight: 1.8 }}>
+              <Typography variant="body2" sx={{ color: '#94a3b8', lineHeight: 1.8, maxWidth: 300 }}>
                 AI-powered sales intelligence tools to help you prepare better, sell smarter, and win more.
               </Typography>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item xs={6} md={2}>
               <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 2, textTransform: 'uppercase', letterSpacing: 1 }}>
                 Products
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
                 <Link href="https://miamar.io/meeting_prep" target="_blank" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
-                  Meeting Prep (Beta)
+                  Meeting Prep
                 </Link>
                 <Link href="mailto:info@miamar.io?subject=Arena Access" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
-                  Arena (Alpha)
+                  Arena
                 </Link>
               </Box>
             </Grid>
 
-            <Grid item xs={12} md={4}>
+            <Grid item xs={6} md={2}>
+              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 2, textTransform: 'uppercase', letterSpacing: 1 }}>
+                Navigation
+              </Typography>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
+                <Link component={RouterLink} to="/" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                  Home
+                </Link>
+                <Link href="#products" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                  Our Products
+                </Link>
+                <Link href="#contact" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                  Contact
+                </Link>
+              </Box>
+            </Grid>
+
+            <Grid item xs={6} md={2}>
               <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 2, textTransform: 'uppercase', letterSpacing: 1 }}>
                 Legal
               </Typography>
