@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import {
   Box,
   Container,
@@ -16,27 +16,18 @@ import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 const PrivacyPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Privacy Policy | MiAmar - AI-Powered Sales Intelligence</title>
-        <meta name="description" content="Learn how MiAmar collects, uses, and protects your personal information. Our privacy policy covers data security, your rights, and our commitment to transparency." />
-        <link rel="canonical" href="https://miamar.io/privacy" />
-        <meta property="og:title" content="Privacy Policy | MiAmar" />
-        <meta property="og:description" content="Learn how MiAmar protects your privacy and handles your data responsibly." />
-        <meta property="og:url" content="https://miamar.io/privacy" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Privacy Policy | MiAmar" />
-        <meta name="twitter:description" content="Learn how MiAmar protects your privacy and handles your data responsibly." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://miamar.io/" },
-              { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://miamar.io/privacy" }
-            ]
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="Privacy Policy | MiAmar - AI-Powered Sales Intelligence"
+        description="Learn how MiAmar collects, uses, and protects your personal information. Our privacy policy covers data security, your rights, and our commitment to transparency."
+        canonicalUrl="https://miamar.io/privacy"
+        ogTitle="Privacy Policy | MiAmar"
+        ogDescription="Learn how MiAmar protects your privacy and handles your data responsibly."
+        ogUrl="https://miamar.io/privacy"
+        breadcrumbs={[
+          { name: "Home", url: "https://miamar.io/" },
+          { name: "Privacy Policy", url: "https://miamar.io/privacy" }
+        ]}
+      />
       <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ bgcolor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)' }}>

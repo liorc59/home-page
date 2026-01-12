@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import {
   Box,
   Container,
@@ -29,29 +29,15 @@ const HomePage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>MiAmar - AI-Powered Sales Intelligence | Meeting Prep & Competitive Intelligence</title>
-        <meta name="description" content="MiAmar provides AI-powered sales intelligence tools. Meeting Prep generates personalized briefs and talking points in 60 seconds. Win more deals with AI." />
-        <link rel="canonical" href="https://miamar.io/" />
-        <meta property="og:title" content="MiAmar - AI-Powered Sales Intelligence" />
-        <meta property="og:description" content="Win more deals with AI-powered meeting preparation and competitive intelligence. Generate personalized briefs and real-time market insights." />
-        <meta property="og:url" content="https://miamar.io/" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="MiAmar - AI-Powered Sales Intelligence" />
-        <meta name="twitter:description" content="Win more deals with AI-powered meeting preparation and competitive intelligence." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [{
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://miamar.io/"
-            }]
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="MiAmar - AI-Powered Sales Intelligence | Meeting Prep & Competitive Intelligence"
+        description="MiAmar provides AI-powered sales intelligence tools. Meeting Prep generates personalized briefs and talking points in 60 seconds. Win more deals with AI."
+        canonicalUrl="https://miamar.io/"
+        ogTitle="MiAmar - AI-Powered Sales Intelligence"
+        ogDescription="Win more deals with AI-powered meeting preparation and competitive intelligence. Generate personalized briefs and real-time market insights."
+        ogUrl="https://miamar.io/"
+        breadcrumbs={[{ name: "Home", url: "https://miamar.io/" }]}
+      />
       <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ bgcolor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)' }}>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import SEO from '../components/SEO';
 import {
   Box,
   Container,
@@ -16,27 +16,18 @@ import { ArrowBack as ArrowBackIcon } from '@mui/icons-material';
 const TermsPage = () => {
   return (
     <>
-      <Helmet>
-        <title>Terms & Conditions | MiAmar - AI-Powered Sales Intelligence</title>
-        <meta name="description" content="Read MiAmar's terms and conditions. Learn about acceptable use, beta services, intellectual property, limitations of liability, and your rights when using our AI-powered sales tools." />
-        <link rel="canonical" href="https://miamar.io/terms" />
-        <meta property="og:title" content="Terms & Conditions | MiAmar" />
-        <meta property="og:description" content="Terms and conditions for using MiAmar's AI-powered sales intelligence services." />
-        <meta property="og:url" content="https://miamar.io/terms" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:title" content="Terms & Conditions | MiAmar" />
-        <meta name="twitter:description" content="Terms and conditions for using MiAmar's AI-powered sales intelligence services." />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://miamar.io/" },
-              { "@type": "ListItem", "position": 2, "name": "Terms & Conditions", "item": "https://miamar.io/terms" }
-            ]
-          })}
-        </script>
-      </Helmet>
+      <SEO
+        title="Terms & Conditions | MiAmar - AI-Powered Sales Intelligence"
+        description="Read MiAmar's terms and conditions. Learn about acceptable use, beta services, intellectual property, limitations of liability, and your rights when using our AI-powered sales tools."
+        canonicalUrl="https://miamar.io/terms"
+        ogTitle="Terms & Conditions | MiAmar"
+        ogDescription="Terms and conditions for using MiAmar's AI-powered sales intelligence services."
+        ogUrl="https://miamar.io/terms"
+        breadcrumbs={[
+          { name: "Home", url: "https://miamar.io/" },
+          { name: "Terms & Conditions", url: "https://miamar.io/terms" }
+        ]}
+      />
       <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
       {/* Navigation */}
       <AppBar position="fixed" elevation={0} sx={{ bgcolor: 'rgba(255,255,255,0.95)', backdropFilter: 'blur(10px)' }}>
