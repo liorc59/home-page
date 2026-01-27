@@ -15,10 +15,7 @@ import {
   Divider
 } from '@mui/material';
 import {
-  RocketLaunch as RocketIcon,
-  Speed as SpeedIcon,
   Email as EmailIcon,
-  ArrowForward as ArrowForwardIcon,
   CheckCircle as CheckCircleIcon,
   Insights as InsightsIcon,
   Groups as GroupsIcon,
@@ -26,13 +23,14 @@ import {
   Notifications as NotificationsIcon,
   Dashboard as DashboardIcon,
   Business as BusinessIcon,
-  Person as PersonIcon,
   Handshake as HandshakeIcon,
   Search as SearchIcon
 } from '@mui/icons-material';
 import { Link as RouterLink } from 'react-router-dom';
 
 const HomePage = () => {
+
+  const contactEmail = "mailto:info@miamar.io?subject=Arena Access Request&body=Hi MiAmar team,%0D%0A%0D%0AI'm interested in learning more about Arena.%0D%0A%0D%0ACompany: %0D%0ARole: %0D%0A%0D%0AThanks!";
 
   return (
     <>
@@ -61,29 +59,45 @@ const HomePage = () => {
               MiAmar
             </Typography>
           </Box>
-          <Box sx={{ display: 'flex', gap: 2, alignItems: 'center' }}>
-            <Link href="#arena" underline="none" sx={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem', '&:hover': { color: '#1e40af' } }}>
+          <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, alignItems: 'center' }}>
+            <Link href="#arena" underline="none" sx={{ color: '#475569', fontWeight: 500, fontSize: '0.95rem', '&:hover': { color: '#1e40af' } }}>
               What is an Arena?
             </Link>
-            <Link href="#features" underline="none" sx={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem', '&:hover': { color: '#1e40af' } }}>
+            <Link href="#features" underline="none" sx={{ color: '#475569', fontWeight: 500, fontSize: '0.95rem', '&:hover': { color: '#1e40af' } }}>
               Features
             </Link>
-            <Link href="#contact" underline="none" sx={{ color: '#475569', fontWeight: 600, fontSize: '0.9rem', '&:hover': { color: '#1e40af' } }}>
+            <Link href="#contact" underline="none" sx={{ color: '#475569', fontWeight: 500, fontSize: '0.95rem', '&:hover': { color: '#1e40af' } }}>
               Contact
             </Link>
             <Button
               variant="contained"
               size="small"
-              href="https://miamar.io/arena"
-              target="_blank"
+              href={contactEmail}
+              startIcon={<EmailIcon />}
               sx={{
                 textTransform: 'none',
                 fontWeight: 600,
+                px: 2.5,
                 background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)',
                 '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
               }}
             >
-              Get Started
+              Get in Touch
+            </Button>
+          </Box>
+          {/* Mobile menu button */}
+          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+            <Button
+              variant="contained"
+              size="small"
+              href={contactEmail}
+              sx={{
+                textTransform: 'none',
+                fontWeight: 600,
+                background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)',
+              }}
+            >
+              Contact
             </Button>
           </Box>
         </Toolbar>
@@ -91,30 +105,33 @@ const HomePage = () => {
 
       {/* Hero Section */}
       <Box sx={{
-        pt: { xs: 14, md: 18 },
-        pb: { xs: 8, md: 12 },
-        background: 'linear-gradient(180deg, #ffffff 0%, #f0f9ff 50%, #f0fdf4 100%)'
+        pt: { xs: 14, md: 20 },
+        pb: { xs: 10, md: 14 },
+        background: 'linear-gradient(180deg, #ffffff 0%, #f0f9ff 100%)'
       }}>
-        <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', maxWidth: 900, mx: 'auto' }}>
+        <Container maxWidth="md">
+          <Box sx={{ textAlign: 'center' }}>
             <Typography variant="h1" sx={{
-              fontSize: { xs: '2.5rem', md: '3.5rem' },
+              fontSize: { xs: '2.5rem', sm: '3rem', md: '3.75rem' },
               fontWeight: 800,
               color: '#0f172a',
               mb: 3,
-              lineHeight: 1.2
+              lineHeight: 1.1
             }}>
-              Build Your Arena.{' '}
+              Build Your Arena.
+              <br />
               <Box component="span" sx={{ background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
                 Know Everything.
               </Box>
             </Typography>
-            <Typography variant="h5" sx={{
+            <Typography sx={{
               color: '#64748b',
               fontWeight: 400,
               mb: 5,
-              lineHeight: 1.6,
-              fontSize: { xs: '1.1rem', md: '1.25rem' }
+              lineHeight: 1.7,
+              fontSize: { xs: '1.1rem', md: '1.25rem' },
+              maxWidth: 600,
+              mx: 'auto'
             }}>
               One intelligent workspace for your competitors, customers, prospects, and partners.
               AI-powered insights delivered to your team automatically.
@@ -123,24 +140,24 @@ const HomePage = () => {
               <Button
                 variant="contained"
                 size="large"
-                href="https://miamar.io/arena"
-                target="_blank"
-                startIcon={<RocketIcon />}
+                href={contactEmail}
+                startIcon={<EmailIcon />}
                 sx={{
                   px: 4,
                   py: 1.5,
                   textTransform: 'none',
                   fontWeight: 700,
                   fontSize: '1rem',
+                  borderRadius: 2,
                   background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)',
-                  boxShadow: '0 8px 24px rgba(30, 64, 175, 0.3)',
+                  boxShadow: '0 8px 24px rgba(30, 64, 175, 0.25)',
                   '&:hover': {
                     background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)',
-                    boxShadow: '0 12px 32px rgba(30, 64, 175, 0.4)'
+                    boxShadow: '0 12px 32px rgba(30, 64, 175, 0.35)'
                   }
                 }}
               >
-                Build Your Arena
+                Request Access
               </Button>
               <Button
                 variant="outlined"
@@ -150,14 +167,15 @@ const HomePage = () => {
                   px: 4,
                   py: 1.5,
                   textTransform: 'none',
-                  fontWeight: 700,
+                  fontWeight: 600,
                   fontSize: '1rem',
-                  borderColor: '#1e40af',
-                  color: '#1e40af',
-                  '&:hover': { borderColor: '#1e3a8a', bgcolor: '#eff6ff' }
+                  borderRadius: 2,
+                  borderColor: '#cbd5e1',
+                  color: '#475569',
+                  '&:hover': { borderColor: '#1e40af', color: '#1e40af', bgcolor: '#f8fafc' }
                 }}
               >
-                What is an Arena?
+                Learn More
               </Button>
             </Box>
           </Box>
@@ -165,515 +183,340 @@ const HomePage = () => {
       </Box>
 
       {/* What is an Arena Section */}
-      <Box id="arena" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#ffffff' }}>
+      <Box id="arena" sx={{ py: { xs: 8, md: 10 }, bgcolor: '#ffffff' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '2.5rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
+          <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
               What is an Arena?
             </Typography>
-            <Typography variant="body1" sx={{ color: '#64748b', fontSize: '1.1rem', maxWidth: 700, mx: 'auto' }}>
+            <Typography sx={{ color: '#64748b', fontSize: '1.05rem', maxWidth: 600, mx: 'auto', lineHeight: 1.7 }}>
               Your Arena is a living map of everyone who matters to your business.
               One workspace. Complete visibility. AI-powered insights.
             </Typography>
           </Box>
 
           <Grid container spacing={3}>
-            {/* Competitors */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Card sx={{
-                height: '100%',
-                borderRadius: 3,
-                border: '1px solid #e2e8f0',
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 12px 24px rgba(0,0,0,0.1)', borderColor: '#3b82f6' }
-              }}>
-                <CardContent sx={{ p: 3, textAlign: 'center' }}>
-                  <Box sx={{ p: 2, borderRadius: 2, bgcolor: '#eff6ff', display: 'inline-flex', mb: 2 }}>
-                    <TrendingUpIcon sx={{ fontSize: 32, color: '#1e40af' }} />
-                  </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a', mb: 1 }}>
-                    Competitors
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', lineHeight: 1.7 }}>
-                    Track every move - product launches, hiring, funding, and news. Know what they're doing before your customers do.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* Customers */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Card sx={{
-                height: '100%',
-                borderRadius: 3,
-                border: '1px solid #e2e8f0',
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 12px 24px rgba(0,0,0,0.1)', borderColor: '#22c55e' }
-              }}>
-                <CardContent sx={{ p: 3, textAlign: 'center' }}>
-                  <Box sx={{ p: 2, borderRadius: 2, bgcolor: '#f0fdf4', display: 'inline-flex', mb: 2 }}>
-                    <BusinessIcon sx={{ fontSize: 32, color: '#16a34a' }} />
-                  </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a', mb: 1 }}>
-                    Customers
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', lineHeight: 1.7 }}>
-                    Stay ahead of churn signals and expansion opportunities. Monitor key accounts and spot risks early.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* Prospects */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Card sx={{
-                height: '100%',
-                borderRadius: 3,
-                border: '1px solid #e2e8f0',
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 12px 24px rgba(0,0,0,0.1)', borderColor: '#f59e0b' }
-              }}>
-                <CardContent sx={{ p: 3, textAlign: 'center' }}>
-                  <Box sx={{ p: 2, borderRadius: 2, bgcolor: '#fffbeb', display: 'inline-flex', mb: 2 }}>
-                    <SearchIcon sx={{ fontSize: 32, color: '#d97706' }} />
-                  </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a', mb: 1 }}>
-                    Prospects
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', lineHeight: 1.7 }}>
-                    Identify buying signals and trigger events. Know when prospects are ready - perfect timing for outreach.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* Partners */}
-            <Grid item xs={12} sm={6} md={3}>
-              <Card sx={{
-                height: '100%',
-                borderRadius: 3,
-                border: '1px solid #e2e8f0',
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 12px 24px rgba(0,0,0,0.1)', borderColor: '#a855f7' }
-              }}>
-                <CardContent sx={{ p: 3, textAlign: 'center' }}>
-                  <Box sx={{ p: 2, borderRadius: 2, bgcolor: '#faf5ff', display: 'inline-flex', mb: 2 }}>
-                    <HandshakeIcon sx={{ fontSize: 32, color: '#7c3aed' }} />
-                  </Box>
-                  <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a', mb: 1 }}>
-                    Partners
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: '#64748b', lineHeight: 1.7 }}>
-                    Monitor partner ecosystems and alliance opportunities. Track their growth and strategic moves.
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
+            {[
+              { icon: <TrendingUpIcon sx={{ fontSize: 28, color: '#1e40af' }} />, title: 'Competitors', desc: 'Track every move - product launches, hiring, funding, and news. Know what they\'re doing before your customers do.', color: '#eff6ff', border: '#3b82f6' },
+              { icon: <BusinessIcon sx={{ fontSize: 28, color: '#16a34a' }} />, title: 'Customers', desc: 'Stay ahead of churn signals and expansion opportunities. Monitor key accounts and spot risks early.', color: '#f0fdf4', border: '#22c55e' },
+              { icon: <SearchIcon sx={{ fontSize: 28, color: '#d97706' }} />, title: 'Prospects', desc: 'Identify buying signals and trigger events. Know when prospects are ready - perfect timing for outreach.', color: '#fffbeb', border: '#f59e0b' },
+              { icon: <HandshakeIcon sx={{ fontSize: 28, color: '#7c3aed' }} />, title: 'Partners', desc: 'Monitor partner ecosystems and alliance opportunities. Track their growth and strategic moves.', color: '#faf5ff', border: '#a855f7' }
+            ].map((item, idx) => (
+              <Grid item xs={12} sm={6} md={3} key={idx}>
+                <Card sx={{
+                  height: '100%',
+                  borderRadius: 3,
+                  border: '1px solid #e2e8f0',
+                  boxShadow: 'none',
+                  transition: 'all 0.3s ease',
+                  '&:hover': { transform: 'translateY(-4px)', boxShadow: '0 12px 24px rgba(0,0,0,0.08)', borderColor: item.border }
+                }}>
+                  <CardContent sx={{ p: 3 }}>
+                    <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: item.color, display: 'inline-flex', mb: 2 }}>
+                      {item.icon}
+                    </Box>
+                    <Typography variant="h6" sx={{ fontWeight: 700, color: '#0f172a', mb: 1, fontSize: '1.1rem' }}>
+                      {item.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: '#64748b', lineHeight: 1.7 }}>
+                      {item.desc}
+                    </Typography>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </Box>
 
       {/* Features Section */}
-      <Box id="features" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#f8fafc' }}>
+      <Box id="features" sx={{ py: { xs: 8, md: 10 }, bgcolor: '#f8fafc' }}>
         <Container maxWidth="lg">
-          <Box sx={{ textAlign: 'center', mb: 8 }}>
-            <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '2.5rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
+          <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
               Your Arena Powers Everything
             </Typography>
-            <Typography variant="body1" sx={{ color: '#64748b', fontSize: '1.1rem', maxWidth: 600, mx: 'auto' }}>
+            <Typography sx={{ color: '#64748b', fontSize: '1.05rem', maxWidth: 550, mx: 'auto' }}>
               Real-time data, AI insights, and smart notifications - all from one platform
             </Typography>
           </Box>
 
           <Grid container spacing={4}>
-            {/* Real-Time Intelligence */}
-            <Grid item xs={12} md={4}>
-              <Card sx={{
-                height: '100%',
-                border: '2px solid #e2e8f0',
-                borderRadius: 4,
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', borderColor: '#3b82f6' }
-              }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                    <Box sx={{ p: 1.5, borderRadius: 2, background: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)' }}>
-                      <DashboardIcon sx={{ fontSize: 32, color: '#1e40af' }} />
-                    </Box>
-                    <Typography variant="h5" sx={{ color: '#0f172a', fontWeight: 700 }}>
-                      Real-Time Data
-                    </Typography>
-                  </Box>
-
-                  <Typography variant="body1" sx={{ color: '#475569', mb: 3, lineHeight: 1.8 }}>
-                    Your Arena continuously monitors multiple data sources for every company you track.
-                  </Typography>
-
-                  <Box>
-                    {['LinkedIn posts & company updates', 'News articles & press releases', 'Funding rounds & financial events', 'Job postings & hiring trends', 'Leadership changes'].map((feature, idx) => (
-                      <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                        <CheckCircleIcon sx={{ fontSize: 18, color: '#22c55e' }} />
-                        <Typography variant="body2" sx={{ color: '#475569' }}>{feature}</Typography>
+            {[
+              {
+                icon: <DashboardIcon sx={{ fontSize: 28, color: '#1e40af' }} />,
+                title: 'Real-Time Data',
+                desc: 'Your Arena continuously monitors multiple data sources for every company you track.',
+                features: ['LinkedIn posts & updates', 'News & press releases', 'Funding rounds', 'Job postings', 'Leadership changes'],
+                gradient: 'linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%)',
+                border: '#3b82f6'
+              },
+              {
+                icon: <InsightsIcon sx={{ fontSize: 28, color: '#0d9488' }} />,
+                title: 'AI Insights',
+                desc: 'Our AI analyzes patterns across your Arena and surfaces what matters most.',
+                features: ['Competitor alerts', 'Churn risk signals', 'Buying indicators', 'Trend detection', 'Recommendations'],
+                gradient: 'linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%)',
+                border: '#0d9488'
+              },
+              {
+                icon: <NotificationsIcon sx={{ fontSize: 28, color: '#7c3aed' }} />,
+                title: 'Smart Alerts',
+                desc: 'Get Arena insights delivered where your team works.',
+                features: ['Slack integration', 'Email digests', 'Meeting prep', 'Custom alerts', 'Team routing'],
+                gradient: 'linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%)',
+                border: '#a855f7'
+              }
+            ].map((item, idx) => (
+              <Grid item xs={12} md={4} key={idx}>
+                <Card sx={{
+                  height: '100%',
+                  border: '1px solid #e2e8f0',
+                  borderRadius: 3,
+                  boxShadow: 'none',
+                  transition: 'all 0.3s ease',
+                  '&:hover': { transform: 'translateY(-6px)', boxShadow: '0 16px 32px rgba(0,0,0,0.08)', borderColor: item.border }
+                }}>
+                  <CardContent sx={{ p: 3.5 }}>
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2.5 }}>
+                      <Box sx={{ p: 1.5, borderRadius: 2, background: item.gradient }}>
+                        {item.icon}
                       </Box>
-                    ))}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* AI-Powered Insights */}
-            <Grid item xs={12} md={4}>
-              <Card sx={{
-                height: '100%',
-                border: '2px solid #e2e8f0',
-                borderRadius: 4,
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', borderColor: '#0d9488' }
-              }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                    <Box sx={{ p: 1.5, borderRadius: 2, background: 'linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%)' }}>
-                      <InsightsIcon sx={{ fontSize: 32, color: '#0d9488' }} />
+                      <Typography variant="h6" sx={{ color: '#0f172a', fontWeight: 700 }}>
+                        {item.title}
+                      </Typography>
                     </Box>
-                    <Typography variant="h5" sx={{ color: '#0f172a', fontWeight: 700 }}>
-                      AI Insights
+
+                    <Typography variant="body2" sx={{ color: '#64748b', mb: 2.5, lineHeight: 1.7 }}>
+                      {item.desc}
                     </Typography>
-                  </Box>
 
-                  <Typography variant="body1" sx={{ color: '#475569', mb: 3, lineHeight: 1.8 }}>
-                    Our AI analyzes patterns across your Arena and surfaces what matters most.
-                  </Typography>
-
-                  <Box>
-                    {['Competitor threat alerts', 'Customer churn risk signals', 'Prospect buying indicators', 'Market trend detection', 'Actionable recommendations'].map((feature, idx) => (
-                      <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                        <CheckCircleIcon sx={{ fontSize: 18, color: '#22c55e' }} />
-                        <Typography variant="body2" sx={{ color: '#475569' }}>{feature}</Typography>
-                      </Box>
-                    ))}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
-
-            {/* Smart Notifications */}
-            <Grid item xs={12} md={4}>
-              <Card sx={{
-                height: '100%',
-                border: '2px solid #e2e8f0',
-                borderRadius: 4,
-                transition: 'all 0.3s ease',
-                '&:hover': { transform: 'translateY(-8px)', boxShadow: '0 20px 40px rgba(0,0,0,0.1)', borderColor: '#a855f7' }
-              }}>
-                <CardContent sx={{ p: 4 }}>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                    <Box sx={{ p: 1.5, borderRadius: 2, background: 'linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%)' }}>
-                      <NotificationsIcon sx={{ fontSize: 32, color: '#7c3aed' }} />
+                    <Box>
+                      {item.features.map((feature, fIdx) => (
+                        <Box key={fIdx} sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 0.75 }}>
+                          <CheckCircleIcon sx={{ fontSize: 16, color: '#22c55e' }} />
+                          <Typography variant="body2" sx={{ color: '#475569', fontSize: '0.875rem' }}>{feature}</Typography>
+                        </Box>
+                      ))}
                     </Box>
-                    <Typography variant="h5" sx={{ color: '#0f172a', fontWeight: 700 }}>
-                      Smart Alerts
-                    </Typography>
-                  </Box>
-
-                  <Typography variant="body1" sx={{ color: '#475569', mb: 3, lineHeight: 1.8 }}>
-                    Get Arena insights delivered where your team works - Slack, email, or dashboard.
-                  </Typography>
-
-                  <Box>
-                    {['Slack integration', 'Daily & weekly digests', 'Meeting prep briefs', 'Customizable alert types', 'Team-specific routing'].map((feature, idx) => (
-                      <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 1 }}>
-                        <CheckCircleIcon sx={{ fontSize: 18, color: '#22c55e' }} />
-                        <Typography variant="body2" sx={{ color: '#475569' }}>{feature}</Typography>
-                      </Box>
-                    ))}
-                  </Box>
-                </CardContent>
-              </Card>
-            </Grid>
+                  </CardContent>
+                </Card>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </Box>
 
       {/* How It Works Banner */}
       <Box sx={{
-        py: 8,
+        py: { xs: 8, md: 10 },
         background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)'
       }}>
         <Container maxWidth="lg">
-          <Typography variant="h2" sx={{ color: 'white', fontWeight: 700, mb: 6, textAlign: 'center', fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
-            Build Your Arena in Minutes
+          <Typography variant="h2" sx={{ color: 'white', fontWeight: 700, mb: 2, textAlign: 'center', fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
+            How It Works
+          </Typography>
+          <Typography sx={{ color: 'rgba(255,255,255,0.8)', textAlign: 'center', mb: 6, maxWidth: 500, mx: 'auto' }}>
+            Get started with your Arena in three simple steps
           </Typography>
 
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={4}>
-              <Box sx={{ textAlign: 'center' }}>
+          <Box sx={{
+            display: 'flex',
+            flexDirection: { xs: 'column', md: 'row' },
+            justifyContent: 'center',
+            alignItems: { xs: 'center', md: 'flex-start' },
+            gap: { xs: 4, md: 6 }
+          }}>
+            {[
+              { num: '1', title: 'Add Your Companies', desc: 'Paste a LinkedIn URL or company name - we handle the rest' },
+              { num: '2', title: 'We Monitor Everything', desc: 'LinkedIn, news, funding, jobs - fresh data every day' },
+              { num: '3', title: 'Get AI Insights', desc: 'Competitor alerts, churn risks, buying signals delivered' }
+            ].map((step, idx) => (
+              <Box key={idx} sx={{ textAlign: 'center', maxWidth: 280 }}>
                 <Box sx={{
-                  width: 60, height: 60, borderRadius: '50%', bgcolor: 'rgba(255,255,255,0.2)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 2,
-                  fontSize: '1.5rem', fontWeight: 700, color: 'white'
-                }}>1</Box>
-                <Typography variant="h6" sx={{ color: 'white', fontWeight: 700, mb: 1 }}>Add Your Companies</Typography>
-                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                  Paste a LinkedIn URL or company name - we handle the rest
+                  width: 56,
+                  height: 56,
+                  borderRadius: '50%',
+                  bgcolor: 'rgba(255,255,255,0.15)',
+                  border: '2px solid rgba(255,255,255,0.3)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  mx: 'auto',
+                  mb: 2,
+                  fontSize: '1.25rem',
+                  fontWeight: 700,
+                  color: 'white'
+                }}>
+                  {step.num}
+                </Box>
+                <Typography sx={{ color: 'white', fontWeight: 700, mb: 1, fontSize: '1.1rem' }}>
+                  {step.title}
+                </Typography>
+                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.75)', lineHeight: 1.6 }}>
+                  {step.desc}
                 </Typography>
               </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box sx={{ textAlign: 'center' }}>
-                <Box sx={{
-                  width: 60, height: 60, borderRadius: '50%', bgcolor: 'rgba(255,255,255,0.2)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 2,
-                  fontSize: '1.5rem', fontWeight: 700, color: 'white'
-                }}>2</Box>
-                <Typography variant="h6" sx={{ color: 'white', fontWeight: 700, mb: 1 }}>We Monitor Everything</Typography>
-                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                  LinkedIn, news, funding, jobs - fresh data every day, no manual work
-                </Typography>
-              </Box>
-            </Grid>
-            <Grid item xs={12} md={4}>
-              <Box sx={{ textAlign: 'center' }}>
-                <Box sx={{
-                  width: 60, height: 60, borderRadius: '50%', bgcolor: 'rgba(255,255,255,0.2)',
-                  display: 'flex', alignItems: 'center', justifyContent: 'center', mx: 'auto', mb: 2,
-                  fontSize: '1.5rem', fontWeight: 700, color: 'white'
-                }}>3</Box>
-                <Typography variant="h6" sx={{ color: 'white', fontWeight: 700, mb: 1 }}>Get AI Insights</Typography>
-                <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.8)' }}>
-                  Competitor alerts, churn risks, buying signals - delivered to Slack or dashboard
-                </Typography>
-              </Box>
-            </Grid>
-          </Grid>
+            ))}
+          </Box>
 
           <Box sx={{ textAlign: 'center', mt: 6 }}>
             <Button
               variant="contained"
               size="large"
-              href="https://miamar.io/arena"
-              target="_blank"
+              href={contactEmail}
+              startIcon={<EmailIcon />}
               sx={{
-                px: 5,
+                px: 4,
                 py: 1.5,
                 textTransform: 'none',
                 fontWeight: 700,
+                borderRadius: 2,
                 bgcolor: 'white',
                 color: '#1e40af',
-                '&:hover': { bgcolor: '#f0f9ff' }
+                '&:hover': { bgcolor: '#f8fafc' }
               }}
             >
-              Start Building Your Arena
+              Request Access
             </Button>
           </Box>
         </Container>
       </Box>
 
-      {/* Meeting Prep Feature */}
-      <Box sx={{ py: { xs: 8, md: 12 }, bgcolor: '#ffffff' }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Chip
-                label="INCLUDED"
-                sx={{ mb: 2, bgcolor: '#dbeafe', color: '#1e40af', fontWeight: 700 }}
-              />
-              <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '2.5rem' }, fontWeight: 700, color: '#0f172a', mb: 3 }}>
-                Meeting Prep
-              </Typography>
-              <Typography variant="body1" sx={{ color: '#64748b', mb: 4, lineHeight: 1.8, fontSize: '1.1rem' }}>
-                Get meeting-ready in 60 seconds. Our AI analyzes company data from your Arena to generate
-                tactical talking points, questions to ask, and conversation scripts.
-              </Typography>
+      {/* Contact Section */}
+      <Box id="contact" sx={{ py: { xs: 8, md: 10 }, bgcolor: '#ffffff' }}>
+        <Container maxWidth="md">
+          <Box sx={{ textAlign: 'center', mb: 6 }}>
+            <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
+              Ready to Build Your Arena?
+            </Typography>
+            <Typography sx={{ color: '#64748b', fontSize: '1.05rem', maxWidth: 500, mx: 'auto', lineHeight: 1.7 }}>
+              Get in touch to learn how MiAmar can help you track your competitive landscape.
+            </Typography>
+          </Box>
 
-              <Box sx={{ mb: 4 }}>
-                {['AI-generated meeting briefs', 'Tactical talking points & scripts', 'Company connection insights', 'Real-time data from your Arena'].map((feature, idx) => (
-                  <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 1.5 }}>
-                    <CheckCircleIcon sx={{ fontSize: 20, color: '#22c55e' }} />
-                    <Typography variant="body1" sx={{ color: '#475569' }}>{feature}</Typography>
-                  </Box>
-                ))}
+          <Card sx={{
+            p: { xs: 4, md: 5 },
+            borderRadius: 4,
+            boxShadow: '0 4px 24px rgba(0,0,0,0.06)',
+            border: '1px solid #e2e8f0',
+            maxWidth: 500,
+            mx: 'auto'
+          }}>
+            <Box sx={{ textAlign: 'center' }}>
+              <Box sx={{
+                p: 2,
+                borderRadius: 2,
+                bgcolor: '#eff6ff',
+                display: 'inline-flex',
+                mb: 3
+              }}>
+                <EmailIcon sx={{ fontSize: 32, color: '#1e40af' }} />
               </Box>
+
+              <Typography variant="h5" sx={{ color: '#0f172a', fontWeight: 700, mb: 1 }}>
+                Contact Us
+              </Typography>
+              <Typography variant="body2" sx={{ color: '#64748b', mb: 4 }}>
+                Send us an email and we'll get back to you shortly
+              </Typography>
 
               <Button
                 variant="contained"
+                fullWidth
                 size="large"
-                href="https://miamar.io/meeting_prep"
-                target="_blank"
-                startIcon={<SpeedIcon />}
+                href={contactEmail}
+                startIcon={<EmailIcon />}
                 sx={{
-                  px: 4,
-                  py: 1.5,
+                  py: 1.75,
                   textTransform: 'none',
                   fontWeight: 700,
+                  fontSize: '1rem',
+                  borderRadius: 2,
                   background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)',
                   '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
                 }}
               >
-                Try Meeting Prep
+                info@miamar.io
               </Button>
-            </Grid>
 
-            <Grid item xs={12} md={6}>
-              <Card sx={{ p: 4, borderRadius: 4, bgcolor: '#f8fafc', border: '1px solid #e2e8f0' }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                  <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: '#eff6ff' }}>
-                    <SpeedIcon sx={{ fontSize: 28, color: '#1e40af' }} />
-                  </Box>
-                  <Box>
-                    <Typography variant="body2" sx={{ color: '#64748b', fontWeight: 600 }}>Meeting with</Typography>
-                    <Typography variant="h6" sx={{ color: '#0f172a', fontWeight: 700 }}>Acme Corporation</Typography>
-                  </Box>
-                </Box>
-                <Divider sx={{ mb: 3 }} />
-                <Typography variant="subtitle2" sx={{ color: '#1e40af', fontWeight: 700, mb: 1 }}>Key Talking Points</Typography>
-                <Typography variant="body2" sx={{ color: '#475569', mb: 2, lineHeight: 1.7 }}>
-                  • Recent Series B funding ($45M) - discuss growth plans<br/>
-                  • New VP of Sales hire - potential champion<br/>
-                  • Competitor X partnership announced last week
-                </Typography>
-                <Typography variant="subtitle2" sx={{ color: '#0d9488', fontWeight: 700, mb: 1 }}>Questions to Ask</Typography>
-                <Typography variant="body2" sx={{ color: '#475569', lineHeight: 1.7 }}>
-                  • How is the team scaling post-funding?<br/>
-                  • What's driving the sales team expansion?
-                </Typography>
-              </Card>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
+              <Divider sx={{ my: 3 }} />
 
-      {/* Contact Section */}
-      <Box id="contact" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#f8fafc' }}>
-        <Container maxWidth="lg">
-          <Grid container spacing={6} alignItems="center">
-            <Grid item xs={12} md={6}>
-              <Typography variant="h2" sx={{ fontSize: { xs: '2rem', md: '2.5rem' }, fontWeight: 700, color: '#0f172a', mb: 3 }}>
-                Ready to Build Your Arena?
-              </Typography>
-              <Typography variant="body1" sx={{ color: '#64748b', mb: 4, lineHeight: 1.8 }}>
-                Start tracking your competitors, customers, and market in minutes.
-                Have questions? We'd love to help you get started.
-              </Typography>
-
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 3 }}>
-                <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: '#eff6ff' }}>
-                  <EmailIcon sx={{ color: '#1e40af' }} />
-                </Box>
-                <Box>
-                  <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, textTransform: 'uppercase' }}>
-                    Email
+              <Box sx={{ display: 'flex', justifyContent: 'center', gap: 3 }}>
+                <Box sx={{ textAlign: 'center' }}>
+                  <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    General
                   </Typography>
-                  <Typography variant="body1" sx={{ color: '#0f172a', fontWeight: 600 }}>
-                    <Link href="mailto:info@miamar.io" underline="hover" sx={{ color: '#1e40af' }}>
-                      info@miamar.io
-                    </Link>
+                  <Typography variant="body2" sx={{ color: '#475569', fontWeight: 500 }}>
+                    info@miamar.io
+                  </Typography>
+                </Box>
+                <Box sx={{ textAlign: 'center' }}>
+                  <Typography variant="caption" sx={{ color: '#94a3b8', fontWeight: 600, textTransform: 'uppercase', letterSpacing: 0.5 }}>
+                    Enterprise
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: '#475569', fontWeight: 500 }}>
+                    info@miamar.io
                   </Typography>
                 </Box>
               </Box>
-
-              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                <Box sx={{ p: 1.5, borderRadius: 2, bgcolor: '#f0fdf4' }}>
-                  <GroupsIcon sx={{ color: '#0d9488' }} />
-                </Box>
-                <Box>
-                  <Typography variant="caption" sx={{ color: '#64748b', fontWeight: 600, textTransform: 'uppercase' }}>
-                    For Enterprise
-                  </Typography>
-                  <Typography variant="body1" sx={{ color: '#0f172a', fontWeight: 600 }}>
-                    <Link href="mailto:info@miamar.io?subject=Enterprise Inquiry" underline="hover" sx={{ color: '#0d9488' }}>
-                      Contact Sales Team
-                    </Link>
-                  </Typography>
-                </Box>
-              </Box>
-            </Grid>
-
-            <Grid item xs={12} md={6}>
-              <Card sx={{ p: 4, borderRadius: 4, boxShadow: '0 10px 40px rgba(0,0,0,0.08)' }}>
-                <Typography variant="h3" sx={{ color: '#0f172a', fontWeight: 700, mb: 2, fontSize: '1.5rem' }}>
-                  Get Started Today
-                </Typography>
-                <Typography variant="body2" sx={{ color: '#64748b', mb: 3 }}>
-                  Create your Arena and start tracking your competitive landscape in minutes.
-                </Typography>
-                <Button
-                  variant="contained"
-                  fullWidth
-                  href="https://miamar.io/arena"
-                  target="_blank"
-                  startIcon={<RocketIcon />}
-                  sx={{
-                    py: 1.5,
-                    textTransform: 'none',
-                    fontWeight: 700,
-                    fontSize: '1rem',
-                    background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)',
-                    '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
-                  }}
-                >
-                  Build Your Arena
-                </Button>
-              </Card>
-            </Grid>
-          </Grid>
+            </Box>
+          </Card>
         </Container>
       </Box>
 
       {/* Footer */}
-      <Box sx={{ py: 6, bgcolor: '#0f172a' }}>
+      <Box sx={{ py: 5, bgcolor: '#0f172a' }}>
         <Container maxWidth="lg">
-          <Grid container spacing={4}>
-            <Grid item xs={12} md={6}>
+          <Grid container spacing={4} alignItems="flex-start">
+            <Grid item xs={12} md={5}>
               <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 2 }}>
                 <Typography variant="h6" sx={{ fontWeight: 800, color: 'white' }}>
                   MiAmar
                 </Typography>
               </Box>
-              <Typography variant="body2" sx={{ color: '#94a3b8', lineHeight: 1.8, maxWidth: 300 }}>
+              <Typography variant="body2" sx={{ color: '#94a3b8', lineHeight: 1.7, maxWidth: 280 }}>
                 Build your Arena - one intelligent workspace for competitors, customers, prospects, and partners.
               </Typography>
             </Grid>
 
             <Grid item xs={6} md={2}>
-              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 2, textTransform: 'uppercase', letterSpacing: 1 }}>
+              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 600, mb: 2, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: 1 }}>
                 Product
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Link href="#arena" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                <Link href="#arena" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
                   What is an Arena?
                 </Link>
-                <Link href="#features" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                <Link href="#features" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
                   Features
-                </Link>
-                <Link href="https://miamar.io/meeting_prep" target="_blank" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
-                  Meeting Prep
                 </Link>
               </Box>
             </Grid>
 
             <Grid item xs={6} md={2}>
-              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 2, textTransform: 'uppercase', letterSpacing: 1 }}>
+              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 600, mb: 2, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: 1 }}>
                 Company
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Link component={RouterLink} to="/" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
-                  Home
-                </Link>
-                <Link href="#contact" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                <Link href="#contact" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
                   Contact
+                </Link>
+                <Link href="mailto:info@miamar.io" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
+                  info@miamar.io
                 </Link>
               </Box>
             </Grid>
 
-            <Grid item xs={6} md={2}>
-              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 700, mb: 2, textTransform: 'uppercase', letterSpacing: 1 }}>
+            <Grid item xs={6} md={3}>
+              <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 600, mb: 2, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: 1 }}>
                 Legal
               </Typography>
               <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-                <Link component={RouterLink} to="/terms" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                <Link component={RouterLink} to="/terms" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
                   Terms & Conditions
                 </Link>
-                <Link component={RouterLink} to="/privacy" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
+                <Link component={RouterLink} to="/privacy" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>
                   Privacy Policy
                 </Link>
               </Box>
@@ -683,10 +526,10 @@ const HomePage = () => {
           <Divider sx={{ my: 4, borderColor: '#1e293b' }} />
 
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
-            <Typography variant="body2" sx={{ color: '#64748b' }}>
+            <Typography variant="body2" sx={{ color: '#64748b', fontSize: '0.85rem' }}>
               © {new Date().getFullYear()} MiAmar. All rights reserved.
             </Typography>
-            <Typography variant="body2" sx={{ color: '#64748b' }}>
+            <Typography variant="body2" sx={{ color: '#64748b', fontSize: '0.85rem' }}>
               info@miamar.io
             </Typography>
           </Box>
