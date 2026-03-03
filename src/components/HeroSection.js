@@ -6,8 +6,6 @@ import {
   Campaign as CampaignIcon,
   Category as CategoryIcon
 } from '@mui/icons-material';
-import ScreenshotFrame from './ScreenshotFrame';
-
 const heroScreenshots = [
   { src: '/screenshots/market-at-a-glance.png', alt: 'Market intelligence dashboard', label: 'Market at a Glance' },
   { src: '/screenshots/competitor-card.png', alt: 'Competitor card with AI insights', label: 'Competitor Cards' },
@@ -121,22 +119,47 @@ const HeroSection = () => {
             ))}
           </Box>
 
-          {/* Crossfade container */}
-          <Box sx={{ position: 'relative' }}>
-            {heroScreenshots.map((s, i) => (
-              <Box
-                key={i}
-                sx={{
-                  position: i === 0 ? 'relative' : 'absolute',
-                  top: 0, left: 0, width: '100%',
-                  opacity: active === i ? 1 : 0,
-                  transition: 'opacity 0.6s ease-in-out',
-                  pointerEvents: active === i ? 'auto' : 'none',
-                }}
-              >
-                <ScreenshotFrame src={s.src} alt={s.alt} />
-              </Box>
-            ))}
+          {/* Crossfade frame — fixed aspect ratio */}
+          <Box sx={{
+            position: 'relative',
+            borderRadius: 2,
+            overflow: 'hidden',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.15)',
+            border: '1px solid #e2e8f0',
+          }}>
+            {/* Browser chrome bar */}
+            <Box sx={{
+              bgcolor: '#f1f5f9',
+              px: 2, py: 1.2,
+              display: 'flex',
+              alignItems: 'center',
+              gap: 0.8,
+              borderBottom: '1px solid #e2e8f0'
+            }}>
+              <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#ef4444' }} />
+              <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#f59e0b' }} />
+              <Box sx={{ width: 10, height: 10, borderRadius: '50%', bgcolor: '#22c55e' }} />
+            </Box>
+            {/* Image area — fixed aspect ratio */}
+            <Box sx={{ position: 'relative', aspectRatio: '16/9', bgcolor: '#f8fafc' }}>
+              {heroScreenshots.map((s, i) => (
+                <Box
+                  key={i}
+                  component="img"
+                  src={s.src}
+                  alt={s.alt}
+                  sx={{
+                    position: 'absolute',
+                    top: 0, left: 0,
+                    width: '100%', height: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'top left',
+                    opacity: active === i ? 1 : 0,
+                    transition: 'opacity 0.6s ease-in-out',
+                  }}
+                />
+              ))}
+            </Box>
           </Box>
         </Box>
 
