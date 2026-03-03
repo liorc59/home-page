@@ -3,11 +3,14 @@ import { Box } from '@mui/material';
 import SEO from '../components/SEO';
 import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
+import VideoSection from '../components/VideoSection';
 import PainPoints from '../components/PainPoints';
 import FeatureShowcase from '../components/FeatureShowcase';
 import CapabilitiesGrid from '../components/CapabilitiesGrid';
 import HowItWorks from '../components/HowItWorks';
 import UseCases from '../components/UseCases';
+import FAQ from '../components/FAQ';
+import ComparisonTable from '../components/ComparisonTable';
 import BookDemoForm from '../components/BookDemoForm';
 import Footer from '../components/Footer';
 
@@ -25,11 +28,14 @@ const HomePage = () => (
     <Box sx={{ minHeight: '100vh', bgcolor: '#fafbfc' }}>
       <Navbar />
       <HeroSection />
+      <VideoSection />
       <PainPoints />
       <FeatureShowcase />
       <CapabilitiesGrid />
       <HowItWorks />
       <UseCases />
+      <FAQ />
+      <ComparisonTable />
       <BookDemoForm />
       <Footer />
     </Box>

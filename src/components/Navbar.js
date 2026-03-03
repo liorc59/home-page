@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   AppBar, Toolbar, Box, Typography, Button, Link,
-  IconButton, Drawer, List, ListItem, ListItemText
+  IconButton, Drawer, List, ListItem, ListItemText, Slide
 } from '@mui/material';
 import { Menu as MenuIcon, Close as CloseIcon } from '@mui/icons-material';
 
@@ -13,6 +13,15 @@ const navLinks = [
 
 const Navbar = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [showMobileCta, setShowMobileCta] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowMobileCta(window.scrollY > 600);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -94,6 +103,42 @@ const Navbar = () => {
           </Button>
         </Box>
       </Drawer>
+
+      {/* Sticky mobile CTA */}
+      <Slide direction="up" in={showMobileCta} mountOnEnter unmountOnExit>
+        <Box
+          sx={{
+            display: { xs: 'block', md: 'none' },
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            zIndex: 1200,
+            background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)',
+            px: 2,
+            py: 1.5,
+            boxShadow: '0 -4px 20px rgba(0,0,0,0.15)'
+          }}
+        >
+          <Button
+            variant="contained"
+            fullWidth
+            href="#demo"
+            sx={{
+              textTransform: 'none',
+              fontWeight: 700,
+              fontSize: '1rem',
+              py: 1.25,
+              bgcolor: '#fff',
+              color: '#1e40af',
+              borderRadius: 2,
+              '&:hover': { bgcolor: '#f1f5f9' }
+            }}
+          >
+            Book a Demo
+          </Button>
+        </Box>
+      </Slide>
     </>
   );
 };
