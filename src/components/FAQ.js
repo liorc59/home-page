@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: 'Is my data secure?',
-    a: 'Yes. We only collect publicly available data. All data is encrypted in transit and at rest. See our Privacy Policy for details.'
+    a: 'Yes. We only collect publicly available data that is shared. Your internal data is kept with full privacy and is available only for your arena. All data is encrypted in transit and at rest. See our Privacy Policy for details.'
   },
   {
     q: 'How is MiAmar different from Klue or Crayon?',
