@@ -66,9 +66,9 @@ const BookDemoForm = () => {
   };
 
   const trustPoints = [
-    { icon: <NoCreditCardIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'No credit card required' },
-    { icon: <PersonSearchIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'Personalized demo for your market' },
-    { icon: <SpeedIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'See results in your first session' }
+    { icon: <NoCreditCardIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'Free during beta' },
+    { icon: <PersonSearchIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'Your own competitive arena, set up for you' },
+    { icon: <SpeedIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'See results within 24 hours' }
   ];
 
   return (
@@ -83,11 +83,14 @@ const BookDemoForm = () => {
           {/* Left column */}
           <Box>
             <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
-              See MiAmar in action
+              Join the Beta
             </Typography>
-            <Typography sx={{ color: '#64748b', fontSize: '1.05rem', lineHeight: 1.7, mb: 4 }}>
-              Get a personalized walkthrough of the platform. We'll show you how MiAmar can
-              transform your competitive intelligence workflow in under 30 minutes.
+            <Typography sx={{ color: '#64748b', fontSize: '1.05rem', lineHeight: 1.7, mb: 2 }}>
+              We're onboarding PMM and CI teams now. Join the beta waiting list and
+              we'll get you set up with your own competitive arena.
+            </Typography>
+            <Typography sx={{ color: '#1e40af', fontSize: '0.95rem', fontWeight: 600, mb: 4 }}>
+              Want to explore first? <a href="https://miamar.io/arena/demo.html" target="_blank" rel="noopener noreferrer" style={{ color: '#1e40af', textDecoration: 'underline' }}>Try the interactive demo</a> — no signup needed.
             </Typography>
             <Box>
               {trustPoints.map((point, idx) => (
@@ -117,7 +120,7 @@ const BookDemoForm = () => {
             ) : (
               <Box component="form" onSubmit={handleSubmit} noValidate>
                 <Typography variant="h5" sx={{ fontWeight: 700, color: '#0f172a', mb: 3 }}>
-                  Book My Demo
+                  Join the Waiting List
                 </Typography>
                 {submitError && <Alert severity="error" sx={{ mb: 2 }}>{submitError}</Alert>}
                 <TextField
@@ -146,6 +149,7 @@ const BookDemoForm = () => {
                   >
                     <MenuItem value="">—</MenuItem>
                     <MenuItem value="Product Marketing">Product Marketing</MenuItem>
+                    <MenuItem value="Competitive Intelligence">Competitive Intelligence</MenuItem>
                     <MenuItem value="Product Management">Product Management</MenuItem>
                     <MenuItem value="Sales / Revenue">Sales / Revenue</MenuItem>
                     <MenuItem value="Other">Other</MenuItem>
@@ -160,7 +164,7 @@ const BookDemoForm = () => {
                     '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
                   }}
                 >
-                  {submitting ? 'Submitting...' : 'Book My Demo'}
+                  {submitting ? 'Submitting...' : 'Join the Waiting List'}
                 </Button>
               </Box>
             )}

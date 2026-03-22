@@ -5,6 +5,19 @@ import ScreenshotFrame from './ScreenshotFrame';
 
 const features = [
   {
+    title: 'Cut through the noise automatically',
+    subtitle: 'Daily Intelligence',
+    bullets: [
+      'Ingests Google Alerts and newsletters — filters noise with AI',
+      'AI-generated intelligence summaries — facts only, no fluff',
+      'Signals by company: who launched, partnered, expanded, or hired',
+      'Trending topics and emerging competitors on your radar'
+    ],
+    screenshot: '/screenshots/daily-intelligence.png',
+    screenshotAlt: 'Daily intelligence with noise filtering',
+    imageRight: true
+  },
+  {
     title: 'See your entire market at a glance',
     subtitle: 'Market Intelligence Dashboard',
     bullets: [
@@ -15,7 +28,7 @@ const features = [
     ],
     screenshot: '/screenshots/market-at-a-glance.png',
     screenshotAlt: 'Market intelligence dashboard',
-    imageRight: true
+    imageRight: false
   },
   {
     title: 'Never miss a competitor move',
@@ -30,7 +43,7 @@ const features = [
     screenshotAlt: 'Events feed with AI classification',
     overlay: '/screenshots/event-detail.png',
     overlayAlt: 'Event detail view',
-    imageRight: false
+    imageRight: true
   },
   {
     title: 'Walk into every meeting with an unfair advantage',

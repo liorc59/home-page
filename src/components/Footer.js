@@ -42,7 +42,7 @@ const Footer = () => (
             Company
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.75 }}>
-            <Link href="#demo" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Book a Demo</Link>
+            <Link href="#demo" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Join the Beta</Link>
             <Link href="mailto:info@miamar.io" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>info@miamar.io</Link>
           </Box>
         </Box>

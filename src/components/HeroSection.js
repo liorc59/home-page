@@ -7,6 +7,7 @@ import {
   Category as CategoryIcon
 } from '@mui/icons-material';
 const heroScreenshots = [
+  { src: '/screenshots/daily-intelligence.png', alt: 'Daily intelligence with noise filtering', label: 'Daily Intelligence' },
   { src: '/screenshots/market-at-a-glance.png', alt: 'Market intelligence dashboard', label: 'Market at a Glance' },
   { src: '/screenshots/competitor-card.png', alt: 'Competitor card with AI insights', label: 'Competitor Cards' },
   { src: '/screenshots/sales-battlecard.png', alt: 'AI-generated sales battlecard', label: 'Sales Battlecards' },
@@ -42,10 +43,10 @@ const HeroSection = () => {
             mb: 3,
             lineHeight: 1.1
           }}>
-            Stop Scrambling for Competitive Intel.
+            Your competitors just made 3 moves.
             <br />
             <Box component="span" sx={{ background: 'linear-gradient(135deg, #1e40af 0%, #0d9488 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-              Start Knowing.
+              Did you catch them?
             </Box>
           </Typography>
           <Typography sx={{
@@ -57,8 +58,8 @@ const HeroSection = () => {
             maxWidth: 680,
             mx: 'auto'
           }}>
-            MiAmar monitors your competitors, prospects, and market 24/7 — surfacing the signals
-            that matter, so PMMs and PMs always walk in prepared.
+            MiAmar ingests your Google Alerts and newsletters, filters the noise automatically,
+            and surfaces what's actually happening in your competitive arena — so PMMs and CI teams always stay ahead.
           </Typography>
           <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button
@@ -73,19 +74,20 @@ const HeroSection = () => {
                 '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)', boxShadow: '0 12px 32px rgba(30, 64, 175, 0.35)' }
               }}
             >
-              Book a Demo
+              Join the Beta
             </Button>
             <Button
               variant="outlined"
               size="large"
-              href="#platform"
+              href="https://miamar.io/arena/demo.html"
+              target="_blank"
               sx={{
                 px: 4, py: 1.5, textTransform: 'none', fontWeight: 600, fontSize: '1rem', borderRadius: 2,
-                borderColor: '#cbd5e1', color: '#475569',
-                '&:hover': { borderColor: '#1e40af', color: '#1e40af', bgcolor: '#f8fafc' }
+                borderColor: '#1e40af', color: '#1e40af',
+                '&:hover': { bgcolor: '#eff6ff', borderColor: '#1e3a8a' }
               }}
             >
-              See the Platform
+              Try the Interactive Demo
             </Button>
           </Box>
         </Box>
@@ -166,7 +168,7 @@ const HeroSection = () => {
         {/* Trust bar */}
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: { xs: 2, md: 4 }, flexWrap: 'wrap', opacity: 0.7 }}>
           <Typography sx={{ color: '#64748b', fontSize: '0.9rem', fontWeight: 500 }}>
-            Built for Product Marketing and Product teams
+            Built for PMM & Competitive Intelligence teams
           </Typography>
           <Box sx={{ display: 'flex', gap: 2 }}>
             <CampaignIcon sx={{ color: '#94a3b8', fontSize: 20 }} />

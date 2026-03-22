@@ -6,10 +6,17 @@ import {
   Email as EmailIcon,
   People as PeopleIcon,
   EventNote as EventNoteIcon,
-  Extension as ExtensionIcon
+  Extension as ExtensionIcon,
+  FilterAlt as FilterAltIcon
 } from '@mui/icons-material';
 
 const capabilities = [
+  {
+    icon: <FilterAltIcon sx={{ fontSize: 28, color: '#f59e0b' }} />,
+    title: 'Noise Filtering',
+    desc: 'AI filters irrelevant articles from Google Alerts and newsletters. See only what matters to your arena.',
+    color: '#fffbeb'
+  },
   {
     icon: <ShieldIcon sx={{ fontSize: 28, color: '#1e40af' }} />,
     title: 'Sales Battlecards',

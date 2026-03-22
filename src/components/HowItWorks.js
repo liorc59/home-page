@@ -4,8 +4,8 @@ import { ArrowForward as ArrowForwardIcon } from '@mui/icons-material';
 
 const steps = [
   { num: '1', title: 'Add your companies', desc: 'Paste a LinkedIn URL or company name — we handle the rest.' },
-  { num: '2', title: 'We monitor everything', desc: 'LinkedIn, news, funding, and jobs data — refreshed daily.' },
-  { num: '3', title: 'AI classifies & prioritizes', desc: 'Events are classified, signals are ranked by relevance.' },
+  { num: '2', title: 'We monitor everything', desc: 'LinkedIn, Google Alerts, newsletters, jobs — ingested and refreshed daily.' },
+  { num: '3', title: 'AI filters noise & extracts signals', desc: 'Irrelevant articles are filtered out. Real events are classified and ranked by relevance.' },
   { num: '4', title: 'You stay ahead', desc: 'Slack alerts, email digests, and a dashboard that\'s always current.' }
 ];
 
@@ -56,7 +56,7 @@ const HowItWorks = () => (
             '&:hover': { bgcolor: '#f8fafc' }
           }}
         >
-          Book a Demo
+          Join the Beta
         </Button>
       </Box>
     </Container>

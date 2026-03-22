@@ -9,26 +9,29 @@ import {
 const points = [
   {
     icon: <TabIcon sx={{ fontSize: 32, color: '#1e40af' }} />,
-    title: 'Scattered across tabs',
-    desc: 'Intel lives in Google Alerts, LinkedIn, Slack, and someone\'s memory. No single source of truth.'
+    title: 'Drowning in alerts',
+    desc: 'Dozens of Google Alerts, newsletters piling up — and somewhere in that noise is the one signal that actually matters.'
   },
   {
     icon: <UpdateIcon sx={{ fontSize: 32, color: '#0d9488' }} />,
-    title: 'Always stale',
-    desc: 'By the time you compile a battlecard, the data is a week old. Competitors don\'t wait for your review cycles.'
+    title: 'Always a step behind',
+    desc: 'You hear about competitor moves after the deal is lost. By the time you compile a battlecard, the data is already stale.'
   },
   {
     icon: <TouchAppIcon sx={{ fontSize: 32, color: '#7c3aed' }} />,
-    title: 'Manual and reactive',
-    desc: 'You hear about competitor moves after the deal is lost. There\'s no time to monitor everything manually.'
+    title: 'No single source of truth',
+    desc: 'Intel lives in someone\'s inbox, a Slack thread, and a spreadsheet last updated two months ago. No one sees the full picture.'
   }
 ];
 
 const PainPoints = () => (
   <Box sx={{ py: { xs: 8, md: 10 }, bgcolor: '#ffffff' }}>
     <Container maxWidth="lg">
-      <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 6, textAlign: 'center' }}>
+      <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2, textAlign: 'center' }}>
         Competitive intelligence shouldn't be a full-time job
+      </Typography>
+      <Typography sx={{ color: '#64748b', fontSize: '1.05rem', textAlign: 'center', mb: 6, maxWidth: 600, mx: 'auto' }}>
+        Most tools add noise. MiAmar removes it.
       </Typography>
       <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 4 }}>
         {points.map((point, idx) => (

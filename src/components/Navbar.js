@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'Platform', href: '#platform' },
   { label: 'Use Cases', href: '#use-cases' },
   { label: 'How It Works', href: '#how-it-works' },
+  { label: 'Try Demo', href: 'https://miamar.io/arena/demo.html', external: true },
 ];
 
 const Navbar = () => {
@@ -43,7 +44,9 @@ const Navbar = () => {
           {/* Desktop nav */}
           <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 3, alignItems: 'center' }}>
             {navLinks.map((link) => (
-              <Link key={link.label} href={link.href} underline="none" sx={{ color: '#475569', fontWeight: 500, fontSize: '0.95rem', '&:hover': { color: '#1e40af' } }}>
+              <Link key={link.label} href={link.href} underline="none"
+                {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
+                sx={{ color: link.external ? '#1e40af' : '#475569', fontWeight: link.external ? 600 : 500, fontSize: '0.95rem', '&:hover': { color: '#1e40af' } }}>
                 {link.label}
               </Link>
             ))}
@@ -59,7 +62,7 @@ const Navbar = () => {
                 '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
               }}
             >
-              Book a Demo
+              Join the Beta
             </Button>
           </Box>
 
@@ -82,9 +85,11 @@ const Navbar = () => {
           </Box>
           <List>
             {navLinks.map((link) => (
-              <ListItem key={link.label} component="a" href={link.href} onClick={() => setDrawerOpen(false)}
+              <ListItem key={link.label} component="a" href={link.href}
+                {...(link.external ? { target: '_blank', rel: 'noopener' } : {})}
+                onClick={() => setDrawerOpen(false)}
                 sx={{ borderRadius: 1, '&:hover': { bgcolor: '#f1f5f9' } }}>
-                <ListItemText primary={link.label} primaryTypographyProps={{ fontWeight: 500, color: '#0f172a' }} />
+                <ListItemText primary={link.label} primaryTypographyProps={{ fontWeight: link.external ? 600 : 500, color: link.external ? '#1e40af' : '#0f172a' }} />
               </ListItem>
             ))}
           </List>
@@ -99,7 +104,7 @@ const Navbar = () => {
               '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
             }}
           >
-            Book a Demo
+            Join the Beta
           </Button>
         </Box>
       </Drawer>
@@ -135,7 +140,7 @@ const Navbar = () => {
               '&:hover': { bgcolor: '#f1f5f9' }
             }}
           >
-            Book a Demo
+            Join the Beta
           </Button>
         </Box>
       </Slide>
