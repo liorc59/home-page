@@ -17,6 +17,9 @@ import HowItWorks from '../components/HowItWorks';
 import UseCases from '../components/UseCases';
 import FAQ from '../components/FAQ';
 import ComparisonTable from '../components/ComparisonTable';
+import Differentiators from '../components/Differentiators';
+import ExampleInsight from '../components/ExampleInsight';
+import FinalCTA from '../components/FinalCTA';
 import BookDemoForm from '../components/BookDemoForm';
 import Footer from '../components/Footer';
 
@@ -66,12 +69,15 @@ const HomePage = () => (
           </Box>
         </Container>
       </Box>
+      <Differentiators />
+      <ExampleInsight />
       <FeatureShowcase />
       <CapabilitiesGrid />
       <HowItWorks />
+      <ComparisonTable />
       <UseCases />
       <FAQ />
-      <ComparisonTable />
+      <FinalCTA />
       <BookDemoForm />
       <Footer />
     </Box>

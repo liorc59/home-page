@@ -7,14 +7,19 @@ import {
 
 const rows = [
   {
-    feature: 'Data freshness',
-    manual: 'Days or weeks old',
-    miamar: 'Refreshed daily, automatically'
+    feature: 'Alert noise',
+    manual: '50+ alerts/day, mostly irrelevant',
+    miamar: 'AI filters 70%+ noise, surfaces what matters'
   },
   {
     feature: 'Time to insight',
-    manual: 'Hours of manual research',
-    miamar: 'Seconds — AI-generated summaries'
+    manual: 'Hours scanning alerts & newsletters',
+    miamar: '2-minute daily briefing with AI summaries'
+  },
+  {
+    feature: 'Data freshness',
+    manual: 'Days or weeks old',
+    miamar: 'Refreshed daily, automatically'
   },
   {
     feature: 'Battlecard creation',
@@ -22,14 +27,19 @@ const rows = [
     miamar: 'Auto-generated & self-updating'
   },
   {
-    feature: 'Event monitoring',
-    manual: 'Google Alerts & RSS (noisy)',
-    miamar: 'Curated signals with context'
+    feature: 'Event classification',
+    manual: 'Read every article yourself',
+    miamar: 'AI classifies: product, partnership, hiring, funding'
+  },
+  {
+    feature: 'Trending topics',
+    manual: 'No visibility into market trends',
+    miamar: 'On the Radar: topics gaining traction vs baseline'
   },
   {
     feature: 'Prospect prep',
     manual: 'Ad-hoc LinkedIn stalking',
-    miamar: 'One-click prospect cards'
+    miamar: 'One-click prospect cards with competitive context'
   },
   {
     feature: 'Integrations',

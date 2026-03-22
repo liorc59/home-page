@@ -74,7 +74,7 @@ const HeroSection = () => {
                 '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)', boxShadow: '0 12px 32px rgba(30, 64, 175, 0.35)' }
               }}
             >
-              Join the Beta
+              Get Started
             </Button>
             <Button
               variant="outlined"

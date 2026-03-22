@@ -7,27 +7,35 @@ import { ExpandMore as ExpandMoreIcon } from '@mui/icons-material';
 const faqs = [
   {
     q: 'What data sources does MiAmar monitor?',
-    a: 'LinkedIn company posts & profiles, news & press, funding rounds, and job postings. All data is refreshed daily so you never miss a signal.'
+    a: 'LinkedIn company posts & profiles, Google Alerts, newsletters (via email ingestion), funding rounds, and job postings. All data is refreshed daily so you never miss a signal.'
+  },
+  {
+    q: 'How does the noise filtering work?',
+    a: 'When you connect your Google Alerts or forward newsletters to MiAmar, our AI reads every article and filters out irrelevant content — stock price commentary, analyst opinions, duplicate mentions. Only articles with real competitive signals (product launches, partnerships, expansions) make it through. Typically 70%+ of articles are filtered as noise.'
   },
   {
     q: 'How long does it take to set up?',
-    a: 'Add your first companies in under 2 minutes. Paste a LinkedIn URL or company name and we start monitoring immediately.'
+    a: 'Add your first companies in under 2 minutes. Paste a LinkedIn URL or company name and we start monitoring immediately. Connect Google Alerts in one click. Forward newsletters to your arena email address.'
+  },
+  {
+    q: 'What is the Daily Intelligence page?',
+    a: 'Your daily briefing. It shows AI-generated summaries of what happened in your competitive arena, signals grouped by company, trending topics compared to previous periods, and source-linked articles. Think of it as your CI analyst\'s morning report — but automated.'
   },
   {
     q: 'Do you integrate with our existing tools?',
-    a: 'Yes. HubSpot, Slack, and Monday.com integrations are available out of the box. We also support email digests for teams that prefer inbox-first workflows.'
+    a: 'Yes. HubSpot, Slack, and Monday.com integrations are available out of the box. We also generate weekly CI newsletters delivered to your team\'s inbox automatically.'
   },
   {
     q: 'Is my data secure?',
-    a: 'Yes. We only collect publicly available data that is shared. Your internal data is kept with full privacy and is available only for your arena. All data is encrypted in transit and at rest. See our Privacy Policy for details.'
+    a: 'Yes. We only collect publicly available data. Your internal data is kept with full privacy and is available only for your arena. All data is encrypted in transit and at rest. See our Privacy Policy for details.'
   },
   {
     q: 'How is MiAmar different from Klue or Crayon?',
-    a: 'MiAmar is purpose-built for PMMs and PMs, not just sales. We combine event intelligence, prospect cards, and product tracking in one workspace — no manual curation needed.'
+    a: 'MiAmar is purpose-built for PMMs and CI teams, not just sales enablement. We ingest your existing alert sources (Google Alerts, newsletters), filter the noise with AI, and combine that with LinkedIn monitoring, product tracking, and auto-generated battlecards — all in one workspace.'
   },
   {
-    q: 'What does a demo include?',
-    a: 'A personalized 30-minute walkthrough using your actual competitors. You\'ll see live data and leave with actionable intel.'
+    q: 'Can I try it before signing up?',
+    a: 'Yes! We have an interactive demo at miamar.io/arena/demo.html that shows real data. No signup needed. If you like what you see, sign up and we\'ll set up your own competitive arena.'
   }
 ];
 

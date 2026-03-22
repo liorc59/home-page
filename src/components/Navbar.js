@@ -62,7 +62,7 @@ const Navbar = () => {
                 '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
               }}
             >
-              Join the Beta
+              Get Started
             </Button>
           </Box>
 
@@ -104,7 +104,7 @@ const Navbar = () => {
               '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
             }}
           >
-            Join the Beta
+            Get Started
           </Button>
         </Box>
       </Drawer>
@@ -140,7 +140,7 @@ const Navbar = () => {
               '&:hover': { bgcolor: '#f1f5f9' }
             }}
           >
-            Join the Beta
+            Get Started
           </Button>
         </Box>
       </Slide>

@@ -4,6 +4,7 @@ import {
   Campaign as CampaignIcon,
   Category as CategoryIcon,
   TrendingUp as TrendingUpIcon,
+  Visibility as VisibilityIcon,
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
 
@@ -16,7 +17,20 @@ const personas = [
     items: [
       'Build self-updating battlecards',
       'Track competitor messaging & launches',
-      'Arm sales with real-time intel'
+      'Arm sales with real-time intel',
+      'Weekly CI newsletters generated automatically'
+    ]
+  },
+  {
+    icon: <VisibilityIcon sx={{ fontSize: 28, color: '#f59e0b' }} />,
+    title: 'For CI Teams',
+    color: '#fffbeb',
+    border: '#f59e0b',
+    items: [
+      'Ingest Google Alerts & newsletters in one place',
+      'AI filters noise — only relevant signals surface',
+      'Trending topics and emerging competitors on your radar',
+      'Source-linked intelligence summaries daily'
     ]
   },
   {
@@ -26,7 +40,7 @@ const personas = [
     border: '#14b8a6',
     items: [
       'Monitor competitor features & roadmaps',
-      'Identify market gaps with data',
+      'Track product releases across your arena',
       'Prepare roadmap discussions backed by evidence'
     ]
   },
@@ -37,8 +51,8 @@ const personas = [
     border: '#a855f7',
     items: [
       'AI meeting briefs before every call',
-      'Spot buying signals early',
-      'Know each prospect\'s competitive landscape'
+      'Know each prospect\'s competitive landscape',
+      'Spot buying signals early'
     ]
   }
 ];
@@ -51,7 +65,7 @@ const UseCases = () => (
           Built for the teams that need to know first
         </Typography>
       </Box>
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'repeat(3, 1fr)' }, gap: 3 }}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
         {personas.map((persona, idx) => (
           <Card key={idx} sx={{
             border: '1px solid #e2e8f0', borderRadius: 3, boxShadow: 'none',

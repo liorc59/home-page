@@ -56,7 +56,7 @@ const HowItWorks = () => (
             '&:hover': { bgcolor: '#f8fafc' }
           }}
         >
-          Join the Beta
+          Get Started
         </Button>
       </Box>
     </Container>

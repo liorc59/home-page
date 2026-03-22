@@ -66,7 +66,7 @@ const BookDemoForm = () => {
   };
 
   const trustPoints = [
-    { icon: <NoCreditCardIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'Free during beta' },
+    { icon: <NoCreditCardIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'No credit card required' },
     { icon: <PersonSearchIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'Your own competitive arena, set up for you' },
     { icon: <SpeedIcon sx={{ fontSize: 20, color: '#22c55e' }} />, text: 'See results within 24 hours' }
   ];
@@ -83,10 +83,10 @@ const BookDemoForm = () => {
           {/* Left column */}
           <Box>
             <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
-              Join the Beta
+              Get Started
             </Typography>
             <Typography sx={{ color: '#64748b', fontSize: '1.05rem', lineHeight: 1.7, mb: 2 }}>
-              We're onboarding PMM and CI teams now. Join the beta waiting list and
+              We're onboarding PMM and CI teams now. Sign up and
               we'll get you set up with your own competitive arena.
             </Typography>
             <Typography sx={{ color: '#1e40af', fontSize: '0.95rem', fontWeight: 600, mb: 4 }}>
@@ -120,7 +120,7 @@ const BookDemoForm = () => {
             ) : (
               <Box component="form" onSubmit={handleSubmit} noValidate>
                 <Typography variant="h5" sx={{ fontWeight: 700, color: '#0f172a', mb: 3 }}>
-                  Join the Waiting List
+                  Get Started
                 </Typography>
                 {submitError && <Alert severity="error" sx={{ mb: 2 }}>{submitError}</Alert>}
                 <TextField
@@ -164,7 +164,7 @@ const BookDemoForm = () => {
                     '&:hover': { background: 'linear-gradient(135deg, #1e3a8a 0%, #0f766e 100%)' }
                   }}
                 >
-                  {submitting ? 'Submitting...' : 'Join the Waiting List'}
+                  {submitting ? 'Submitting...' : 'Get Started'}
                 </Button>
               </Box>
             )}
