@@ -1,0 +1,38 @@
+Your Google Alerts sent you 354 articles this week.
+
+Only 95 actually mattered.
+
+That's 73% noise. Stock commentary, analyst opinions, duplicate mentions, irrelevant press releases — all filtered out automatically.
+
+Here's what that looks like in practice:
+
+We ingested 354 articles from Google Alerts and newsletters for one competitive arena. Our AI read every single one and asked: "Is this a real competitive signal?"
+
+The result:
+→ 354 ingested
+→ 95 approved (real signals)
+→ 259 filtered as noise (73.2%)
+
+But noise filtering is just step one.
+
+The real magic: compacting signals from multiple sources into one event.
+
+Take this example — "The Trade Desk reached its lowest stock point in years." Three different sources (MSN, Intellectia.AI, Bitget) all covered the same story. Instead of showing you 3 separate alerts, MiAmar merges them into one event with all 3 sources linked.
+
+One event. Multiple sources. Full context.
+
+Same with the LinkedIn × Trade Desk partnership for programmatic TV buying — one clean signal from The Keyword, not 12 versions of the same press release.
+
+This is the difference between a CI tool and a CI workflow:
+→ Google Alerts gives you 354 articles to scan
+→ MiAmar gives you a 2-minute briefing with source-linked events
+
+Every signal is classified (product launch, partnership, funding, expansion), linked to its source, and grouped by company. Nothing is made up — everything traces back to the original article.
+
+We built this for PMMs and CI teams who are tired of spending their mornings reading the same news from 5 different tabs.
+
+See it yourself with real data: https://miamar.io/arena/demo.html
+
+Or sign up and we'll set up your own competitive arena → https://miamar.io
+
+#CompetitiveIntelligence #ProductMarketing #PMM #AdTech #MarketIntelligence #AI

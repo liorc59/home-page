@@ -28,7 +28,7 @@ const PainPoints = () => (
   <Box sx={{ py: { xs: 8, md: 10 }, bgcolor: '#ffffff' }}>
     <Container maxWidth="lg">
       <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2, textAlign: 'center' }}>
-        Competitive intelligence shouldn't be a full-time job
+        The most cost-effective CI system on the market
       </Typography>
       <Typography sx={{ color: '#64748b', fontSize: '1.05rem', textAlign: 'center', mb: 6, maxWidth: 600, mx: 'auto' }}>
         Most tools add noise. MiAmar removes it.
