@@ -17,11 +17,11 @@ const TermsPage = () => {
   return (
     <>
       <SEO
-        title="Terms & Conditions | MiAmar - AI-Powered Sales Intelligence"
-        description="Read MiAmar's terms and conditions. Learn about acceptable use, beta services, intellectual property, limitations of liability, and your rights when using our AI-powered sales tools."
+        title="Master Terms & Conditions | MiAmar Ltd (Cyprus)"
+        description="MiAmar Ltd's Master Terms & Conditions for use of the Arena AI-powered competitive intelligence platform. Subscription plans, billing, data sourcing, intellectual property, and Cyprus governing law."
         canonicalUrl="https://miamar.io/terms"
-        ogTitle="Terms & Conditions | MiAmar"
-        ogDescription="Terms and conditions for using MiAmar's AI-powered sales intelligence services."
+        ogTitle="Master Terms & Conditions | MiAmar"
+        ogDescription="Master Terms & Conditions for the Arena competitive intelligence platform by MiAmar Ltd, Cyprus."
         ogUrl="https://miamar.io/terms"
         breadcrumbs={[
           { name: "Home", url: "https://miamar.io/" },
@@ -53,121 +53,87 @@ const TermsPage = () => {
       {/* Content */}
       <Container maxWidth="md" sx={{ pt: 14, pb: 8 }}>
         <Typography variant="h1" sx={{ fontWeight: 800, color: '#0f172a', mb: 2, fontSize: { xs: '2rem', md: '2.5rem' } }}>
-          Terms & Conditions
+          Master Terms & Conditions
         </Typography>
         <Typography variant="body2" sx={{ color: '#64748b', mb: 4 }}>
-          Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          Last updated: May 14, 2026
         </Typography>
 
         <Box sx={{ bgcolor: 'white', borderRadius: 3, p: { xs: 3, md: 5 }, boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
+          <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 4 }}>
+            This Master Terms & Conditions agreement (“Agreement”) is entered into between MiAmar Ltd, a company incorporated in the Republic of Cyprus (“MiAmar”, “we”, “us”), and the entity or individual accessing the Services (“Customer”, “you”).
+          </Typography>
+
           <Section title="1. Acceptance of Terms">
-            By accessing and using MiAmar's services ("Services"), including Meeting Prep and Arena, you agree to be bound by these Terms & Conditions. If you do not agree to these terms, please do not use our Services.
+            By creating an account or accessing the Arena platform (the “Services”), you agree to be bound by this Agreement. If you represent an entity, you warrant that you have the legal authority to bind that entity.
           </Section>
 
           <Section title="2. Description of Services">
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              MiAmar provides AI-powered sales intelligence tools:
+              MiAmar provides Arena, an AI-powered competitive intelligence dashboard. We reserve the right to modify features, update the AI models, and improve the dashboard interface at our discretion.
             </Typography>
-            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li><strong>Meeting Prep (Beta):</strong> An AI-driven meeting preparation tool that generates briefs, talking points, and insights based on publicly available company information.</li>
-              <li><strong>Arena (Alpha):</strong> A competitive intelligence dashboard for tracking and monitoring market movements.</li>
-            </ul>
+            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mt: 2 }}>
+              <strong>2.1. Data Sourcing and Scope.</strong> The Services rely on automated harvesting of publicly available information. While MiAmar strives for comprehensive market coverage, the selection of data sources, frequency of crawling, and the inclusion or exclusion of specific data points remains at the sole discretion of MiAmar. We do not guarantee that every publicly available piece of information regarding a tracked entity will be captured, nor do we guarantee the real-time accuracy of third-party data.
+            </Typography>
           </Section>
 
-          <Section title="3. Beta and Alpha Services">
+          <Section title="3. Subscription Plans and Usage">
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              Our Services are currently offered in beta and alpha stages:
+              <strong>3.1. Plan Tiers and Seat Limits.</strong> Access is granted based on the following Seat Limits (authorized individual users):
             </Typography>
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Beta and alpha services are provided "as is" and may contain bugs or errors.</li>
-              <li>Features may be added, modified, or removed without notice.</li>
-              <li>Service availability is not guaranteed during the beta/alpha period.</li>
-              <li>We reserve the right to discontinue beta/alpha access at any time.</li>
-              <li>Beta services are currently offered free of charge for a limited time.</li>
+              <li><strong>Standard:</strong> Up to 2 Seats</li>
+              <li><strong>Pro:</strong> Up to 5 Seats</li>
+              <li><strong>Enterprise:</strong> 15+ Seats (as specified in your Order Form)</li>
+            </ul>
+            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mt: 2 }}>
+              Credentials may not be shared between multiple individuals. Each Seat must be assigned to a unique user.
+            </Typography>
+          </Section>
+
+          <Section title="4. Fees and Payment">
+            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
+              <li><strong>4.1. Billing:</strong> Fees are billed in advance on a monthly or annual basis (“Billing Cycle”).</li>
+              <li><strong>4.2. Auto-Renewal:</strong> Subscriptions automatically renew unless cancelled at least thirty (30) days prior to the renewal date.</li>
+              <li><strong>4.3. Commitment:</strong> Cancellation does not waive the obligation to pay for the remainder of the current Billing Cycle. Annual commitments must be paid in full.</li>
+              <li><strong>4.4. Taxes:</strong> Fees are exclusive of VAT. Cyprus-based VAT or EU Reverse Charge rules apply based on your location and VAT status.</li>
             </ul>
           </Section>
 
-          <Section title="4. User Accounts">
+          <Section title="5. Intellectual Property">
+            MiAmar owns all rights, titles, and interests in the Services, including AI algorithms and software. Customer retains ownership of its specific account configurations and internal notes.
+          </Section>
+
+          <Section title="6. Data Privacy and Security">
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>You must provide accurate information when creating an account.</li>
-              <li>You are responsible for maintaining the security of your account credentials.</li>
-              <li>You must notify us immediately of any unauthorized use of your account.</li>
-              <li>We reserve the right to suspend or terminate accounts that violate these terms.</li>
+              <li><strong>6.1. Privacy Policy:</strong> Our processing of personal data is governed by our <Link component={RouterLink} to="/privacy" sx={{ color: '#1e40af', fontWeight: 600 }}>Privacy Policy</Link>.</li>
+              <li><strong>6.2. Anonymized Data:</strong> MiAmar may use anonymized, aggregated data derived from your use of the platform to improve its global AI models.</li>
+              <li><strong>6.3. DPA:</strong> To the extent that MiAmar processes any Personal Data on your behalf, the MiAmar Data Processing Addendum (DPA) is hereby incorporated by reference into these Terms and shall apply to such processing.</li>
             </ul>
           </Section>
 
-          <Section title="5. Acceptable Use">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              You agree not to:
-            </Typography>
-            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Use the Services for any unlawful purpose or in violation of any laws.</li>
-              <li>Attempt to gain unauthorized access to our systems or other users' accounts.</li>
-              <li>Interfere with or disrupt the Services or servers.</li>
-              <li>Scrape, crawl, or use automated means to access the Services without permission.</li>
-              <li>Reverse engineer, decompile, or disassemble any part of the Services.</li>
-              <li>Use the Services to harass, abuse, or harm others.</li>
-            </ul>
+          <Section title="7. Disclaimer and Limitation of Liability">
+            The Services are provided “AS-IS”. MiAmar is not liable for inaccuracies in third-party market data. Our total liability shall not exceed the amount paid by you in the twelve (12) months preceding the claim.
           </Section>
 
-          <Section title="6. Intellectual Property">
-            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>All content, features, and functionality of the Services are owned by MiAmar and protected by intellectual property laws.</li>
-              <li>You may not copy, modify, distribute, or create derivative works from our Services without explicit permission.</li>
-              <li>You retain ownership of any data you input into the Services.</li>
-            </ul>
+          <Section title="8. Governing Law">
+            This Agreement is governed by the laws of the Republic of Cyprus. Exclusive jurisdiction for any disputes shall be the courts of Nicosia, Cyprus.
           </Section>
 
-          <Section title="7. Data and Privacy">
-            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Our collection and use of personal information is governed by our Privacy Policy.</li>
-              <li>We use publicly available data to generate insights and do not access private or confidential information.</li>
-              <li>You are responsible for ensuring you have the right to use any data you input into our Services.</li>
-            </ul>
+          <Section title="9. Changes to These Terms">
+            We reserve the right to modify this Agreement from time to time. Material changes will be communicated to you by email or through the Services with reasonable advance notice. Your continued use of the Services after the effective date of any updated Agreement constitutes acceptance of the changes.
           </Section>
 
-          <Section title="8. Disclaimer of Warranties">
+          <Section title="10. Contact" isLast>
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DO NOT WARRANT THAT THE SERVICES WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE. AI-GENERATED CONTENT MAY CONTAIN INACCURACIES AND SHOULD BE VERIFIED INDEPENDENTLY.
-            </Typography>
-          </Section>
-
-          <Section title="9. Limitation of Liability">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              TO THE MAXIMUM EXTENT PERMITTED BY LAW, MIAMAR SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING FROM YOUR USE OF THE SERVICES. OUR TOTAL LIABILITY SHALL NOT EXCEED THE AMOUNT YOU PAID FOR THE SERVICES IN THE TWELVE MONTHS PRECEDING THE CLAIM.
-            </Typography>
-          </Section>
-
-          <Section title="10. Indemnification">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              You agree to indemnify and hold MiAmar harmless from any claims, damages, or expenses arising from your use of the Services, violation of these terms, or infringement of any third-party rights.
-            </Typography>
-          </Section>
-
-          <Section title="11. Changes to Terms">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              We reserve the right to modify these terms at any time. We will notify users of significant changes via email or through the Services. Continued use of the Services after changes constitutes acceptance of the new terms.
-            </Typography>
-          </Section>
-
-          <Section title="12. Termination">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              We may terminate or suspend your access to the Services at any time, with or without cause, with or without notice. Upon termination, your right to use the Services will immediately cease.
-            </Typography>
-          </Section>
-
-          <Section title="13. Governing Law">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              These terms shall be governed by and construed in accordance with the laws of Israel, without regard to its conflict of law provisions.
-            </Typography>
-          </Section>
-
-          <Section title="14. Contact Information" isLast>
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              For questions about these Terms & Conditions, please contact us at:
+              For questions about this Agreement, please contact us at:
             </Typography>
             <Typography variant="body1" sx={{ color: '#1e40af', fontWeight: 600, mt: 1 }}>
               <Link href="mailto:info@miamar.io">info@miamar.io</Link>
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#64748b', mt: 1 }}>
+              MiAmar Ltd<br />
+              [Insert Registered Cyprus Office Address]
             </Typography>
           </Section>
         </Box>
@@ -178,7 +144,7 @@ const TermsPage = () => {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
             <Typography variant="body2" sx={{ color: '#64748b' }}>
-              © {new Date().getFullYear()} MiAmar. All rights reserved.
+              © {new Date().getFullYear()} MiAmar Ltd. All rights reserved.
             </Typography>
             <Box sx={{ display: 'flex', gap: 3 }}>
               <Link component={RouterLink} to="/privacy" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>

@@ -17,11 +17,11 @@ const PrivacyPage = () => {
   return (
     <>
       <SEO
-        title="Privacy Policy | MiAmar - AI-Powered Sales Intelligence"
-        description="Learn how MiAmar collects, uses, and protects your personal information. Our privacy policy covers data security, your rights, and our commitment to transparency."
+        title="Privacy Policy | MiAmar Ltd (Cyprus, GDPR)"
+        description="MiAmar Ltd's GDPR-compliant Privacy Policy. Learn how we collect, use, and protect personal data as a Cyprus-incorporated B2B SaaS, including roles, legal basis, your rights, and international transfers."
         canonicalUrl="https://miamar.io/privacy"
         ogTitle="Privacy Policy | MiAmar"
-        ogDescription="Learn how MiAmar protects your privacy and handles your data responsibly."
+        ogDescription="MiAmar Ltd's GDPR-compliant Privacy Policy for the Arena platform."
         ogUrl="https://miamar.io/privacy"
         breadcrumbs={[
           { name: "Home", url: "https://miamar.io/" },
@@ -56,148 +56,124 @@ const PrivacyPage = () => {
           Privacy Policy
         </Typography>
         <Typography variant="body2" sx={{ color: '#64748b', mb: 4 }}>
-          Last updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+          Last updated: May 14, 2026
         </Typography>
 
         <Box sx={{ bgcolor: 'white', borderRadius: 3, p: { xs: 3, md: 5 }, boxShadow: '0 4px 20px rgba(0,0,0,0.05)' }}>
           <Section title="1. Introduction">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              MiAmar ("we", "our", or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services, including Meeting Prep and Arena.
-            </Typography>
+            MiAmar Ltd (“we”, “our”, or “us”), a company incorporated in the Republic of Cyprus, is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you use Arena (the “Services”). As a Cyprus entity, we process personal data in accordance with the EU General Data Protection Regulation (GDPR).
           </Section>
 
-          <Section title="2. Information We Collect">
+          <Section title="2. Roles and Responsibilities">
+            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
+              <li><strong>MiAmar as a Data Controller:</strong> We are the Controller of the personal data of our users (e.g., account information, billing details).</li>
+              <li><strong>MiAmar as a Data Processor:</strong> When you upload or input specific business data into Arena, we act as a Processor. This processing is governed by our Data Processing Addendum (DPA).</li>
+            </ul>
+          </Section>
+
+          <Section title="3. Information We Collect">
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              <strong>Information you provide:</strong>
+              <strong>3.1 Information You Provide</strong>
             </Typography>
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Account information (name, email address)</li>
-              <li>Company information you input for meeting preparation</li>
-              <li>Communication data when you contact us</li>
-              <li>Feedback and survey responses</li>
+              <li><strong>Account Data:</strong> Name, business email, job title, and password.</li>
+              <li><strong>Billing Data:</strong> Tax ID (VAT number), billing address, and payment confirmation (processed via secure third-party gateways; we do not store full credit card numbers).</li>
+              <li><strong>Customer Support:</strong> Records of communications when you contact us for help.</li>
             </ul>
 
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2, mt: 3 }}>
-              <strong>Information collected automatically:</strong>
+              <strong>3.2 Information Collected Automatically</strong>
             </Typography>
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Usage data (pages visited, features used, time spent)</li>
-              <li>Device information (browser type, operating system)</li>
-              <li>IP address and approximate location</li>
-              <li>Cookies and similar tracking technologies</li>
+              <li><strong>Usage Metadata:</strong> Log files, IP addresses, browser types, and timestamps of activity within the Arena dashboard.</li>
+              <li><strong>Cookies:</strong> We use essential cookies for session management and analytical cookies to improve performance.</li>
             </ul>
 
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2, mt: 3 }}>
-              <strong>Publicly available data:</strong>
+              <strong>3.3 Publicly Sourced Data (The “Arena” Engine)</strong>
             </Typography>
-            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Company information from public sources (LinkedIn, news articles, company websites)</li>
-              <li>Social media posts from public company profiles</li>
-              <li>Publicly available news and press releases</li>
-            </ul>
-          </Section>
-
-          <Section title="3. How We Use Your Information">
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              We use your information to:
+              Our AI engine processes Publicly Available Information (PAI) to provide market insights. This includes:
             </Typography>
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Provide, maintain, and improve our Services</li>
-              <li>Generate AI-powered meeting briefs and insights</li>
-              <li>Personalize your experience</li>
-              <li>Communicate with you about updates and features</li>
-              <li>Respond to your inquiries and support requests</li>
-              <li>Analyze usage patterns to improve our Services</li>
-              <li>Protect against fraud and abuse</li>
-              <li>Comply with legal obligations</li>
+              <li>Official company registers and websites.</li>
+              <li>Public social media profiles and professional networking sites (e.g., LinkedIn).</li>
+              <li>Public news, press releases, and financial reports.</li>
             </ul>
           </Section>
 
-          <Section title="4. Data Sharing and Disclosure">
+          <Section title="4. Legal Basis for Processing (GDPR)">
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              We may share your information with:
+              We process your data under the following legal bases:
             </Typography>
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li><strong>Service providers:</strong> Third parties who help us operate our Services (hosting, analytics, AI processing)</li>
-              <li><strong>Legal requirements:</strong> When required by law or to protect our rights</li>
-              <li><strong>Business transfers:</strong> In connection with a merger, acquisition, or sale of assets</li>
+              <li><strong>Performance of a Contract:</strong> To provide the Services you have paid for.</li>
+              <li><strong>Legitimate Interests:</strong> To improve our AI models, ensure platform security, and conduct B2B marketing.</li>
+              <li><strong>Legal Obligation:</strong> To comply with Cyprus tax laws and accounting requirements.</li>
             </ul>
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mt: 2 }}>
-              We do not sell your personal information to third parties.
-            </Typography>
           </Section>
 
-          <Section title="5. AI and Data Processing">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              Our Services use artificial intelligence to process publicly available data and generate insights. The AI analyzes public company information, social media posts, and news articles. We do not access private or confidential information. AI-generated content may contain inaccuracies and should be independently verified.
-            </Typography>
+          <Section title="5. How We Use Your Information">
+            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
+              <li>To operate the Arena platform and generate competitive intelligence.</li>
+              <li>To manage your subscription, billing, and seat limits.</li>
+              <li><strong>AI Training:</strong> We may use anonymized, aggregated data to train and refine our market-monitoring algorithms. We do not sell your personal data to third parties.</li>
+            </ul>
           </Section>
 
-          <Section title="6. Data Security">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              We implement appropriate technical and organizational measures to protect your information, including encryption in transit and at rest, access controls, and regular security assessments. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.
-            </Typography>
+          <Section title="6. Data Sharing and Transfers">
+            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
+              <li><strong>Third-Party Providers:</strong> We use cloud infrastructure (e.g., AWS / Google Cloud) and AI processing units. All providers are GDPR-compliant.</li>
+              <li><strong>International Transfers:</strong> If data is transferred outside the European Economic Area (EEA), we ensure “Standard Contractual Clauses” (SCCs) are in place to protect your data.</li>
+              <li><strong>No Sale of Data:</strong> We never sell your personal information or the specific configurations of your Arena dashboard to third parties.</li>
+            </ul>
           </Section>
 
-          <Section title="7. Data Retention">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              We retain your information for as long as necessary to provide our Services and fulfill the purposes described in this policy. You may request deletion of your account and associated data at any time by contacting us.
-            </Typography>
-          </Section>
-
-          <Section title="8. Your Rights">
+          <Section title="7. Data Security">
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
-              Depending on your location, you may have the following rights:
+              As a Cyprus-based entity, we implement high-standard technical and organizational measures (TOMs), including:
             </Typography>
             <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
-              <li>Access and receive a copy of your personal data</li>
-              <li>Correct inaccurate or incomplete data</li>
-              <li>Delete your personal data</li>
-              <li>Object to or restrict certain processing</li>
-              <li>Data portability</li>
-              <li>Withdraw consent where applicable</li>
+              <li>Encryption of data at rest (AES-256) and in transit (TLS 1.2+).</li>
+              <li>Role-based access controls for our employees.</li>
+              <li>Regular vulnerability scanning.</li>
             </ul>
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mt: 2 }}>
-              To exercise these rights, please contact us at info@miamar.io.
-            </Typography>
           </Section>
 
-          <Section title="9. Cookies">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              We use cookies and similar technologies to enhance your experience, analyze usage, and provide personalized content. You can manage your cookie preferences through your browser settings. Note that disabling certain cookies may affect the functionality of our Services.
-            </Typography>
+          <Section title="8. Data Retention">
+            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
+              <li><strong>Account Data:</strong> Retained for the duration of your subscription plus 7 years (per Cyprus tax and audit laws).</li>
+              <li><strong>Usage Data:</strong> Anonymized after 12 months for long-term product analytics.</li>
+            </ul>
           </Section>
 
-          <Section title="10. Third-Party Links">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              Our Services may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to read their privacy policies before providing any information.
+          <Section title="9. Your Rights (GDPR)">
+            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8, mb: 2 }}>
+              Under EU law, you have the following rights:
             </Typography>
+            <ul style={{ color: '#475569', lineHeight: 2, marginTop: 0 }}>
+              <li><strong>Access / Portability:</strong> Request a copy of your data.</li>
+              <li><strong>Rectification:</strong> Correct inaccurate data.</li>
+              <li><strong>Erasure (“Right to be Forgotten”):</strong> Request deletion of your account.</li>
+              <li><strong>Restriction:</strong> Ask us to stop processing your data temporarily.</li>
+              <li><strong>Lodge a Complaint:</strong> You have the right to contact the Cyprus Data Protection Commissioner (<Link href="https://www.dataprotection.gov.cy" target="_blank" rel="noopener noreferrer" sx={{ color: '#1e40af', fontWeight: 600 }}>www.dataprotection.gov.cy</Link>).</li>
+            </ul>
           </Section>
 
-          <Section title="11. Children's Privacy">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              Our Services are not intended for children under 16 years of age. We do not knowingly collect personal information from children. If you believe we have collected information from a child, please contact us immediately.
-            </Typography>
+          <Section title="10. Changes to This Policy">
+            We may update this Privacy Policy from time to time. We will notify you of significant changes via email or through our Services. Your continued use of our Services after the effective date of any updated Policy constitutes acceptance of the changes.
           </Section>
 
-          <Section title="12. International Data Transfers">
+          <Section title="11. Contact Us" isLast>
             <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              Your information may be transferred to and processed in countries other than your country of residence. We ensure appropriate safeguards are in place for such transfers in accordance with applicable data protection laws.
-            </Typography>
-          </Section>
-
-          <Section title="13. Changes to This Policy">
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              We may update this Privacy Policy from time to time. We will notify you of significant changes via email or through our Services. Your continued use of our Services after changes constitutes acceptance of the updated policy.
-            </Typography>
-          </Section>
-
-          <Section title="14. Contact Us" isLast>
-            <Typography variant="body1" sx={{ color: '#475569', lineHeight: 1.8 }}>
-              If you have questions or concerns about this Privacy Policy or our data practices, please contact us at:
+              For any privacy-related inquiries or to exercise your rights, please contact our Data Protection representative at:
             </Typography>
             <Typography variant="body1" sx={{ color: '#1e40af', fontWeight: 600, mt: 1 }}>
               <Link href="mailto:info@miamar.io">info@miamar.io</Link>
+            </Typography>
+            <Typography variant="body2" sx={{ color: '#64748b', mt: 1 }}>
+              MiAmar Ltd<br />
+              [Insert Registered Cyprus Office Address]
             </Typography>
           </Section>
         </Box>
@@ -208,7 +184,7 @@ const PrivacyPage = () => {
         <Container maxWidth="lg">
           <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
             <Typography variant="body2" sx={{ color: '#64748b' }}>
-              © {new Date().getFullYear()} MiAmar. All rights reserved.
+              © {new Date().getFullYear()} MiAmar Ltd. All rights reserved.
             </Typography>
             <Box sx={{ display: 'flex', gap: 3 }}>
               <Link component={RouterLink} to="/terms" underline="hover" sx={{ color: '#94a3b8', '&:hover': { color: 'white' } }}>
