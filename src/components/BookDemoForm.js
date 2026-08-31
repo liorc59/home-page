@@ -7,7 +7,8 @@ import {
   CheckCircle as CheckCircleIcon,
   CreditCardOff as NoCreditCardIcon,
   PersonSearch as PersonSearchIcon,
-  Speed as SpeedIcon
+  Speed as SpeedIcon,
+  EventOutlined as EventIcon
 } from '@mui/icons-material';
 
 const BookDemoForm = () => {
@@ -86,12 +87,27 @@ const BookDemoForm = () => {
               Get Started
             </Typography>
             <Typography sx={{ color: '#64748b', fontSize: '1.05rem', lineHeight: 1.7, mb: 2 }}>
-              We're onboarding PMM and CI teams now. Sign up and
+              We're onboarding Competitive Intelligence teams now. Sign up and
               we'll get you set up with your own competitive arena.
             </Typography>
-            <Typography sx={{ color: '#1e40af', fontSize: '0.95rem', fontWeight: 600, mb: 4 }}>
+            <Typography sx={{ color: '#1e40af', fontSize: '0.95rem', fontWeight: 600, mb: 2.5 }}>
               Want to explore first? <a href="https://miamar.io/arena/demo.html" target="_blank" rel="noopener noreferrer" style={{ color: '#1e40af', textDecoration: 'underline' }}>Try the interactive demo</a> — no signup needed.
             </Typography>
+            {/* Prefer a conversation? Book a live demo call. */}
+            <Button
+              variant="outlined"
+              startIcon={<EventIcon />}
+              href="https://calendly.com/eran-miamar/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{
+                textTransform: 'none', fontWeight: 600, borderRadius: 2, mb: 4,
+                borderColor: '#0d9488', color: '#0f766e',
+                '&:hover': { bgcolor: '#f0fdfa', borderColor: '#0f766e' },
+              }}
+            >
+              Prefer to talk? Schedule a 30-min meeting
+            </Button>
             <Box>
               {trustPoints.map((point, idx) => (
                 <Box key={idx} sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>

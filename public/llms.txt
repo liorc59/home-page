@@ -1,0 +1,28 @@
+# MiAmar
+
+> MiAmar is an AI-powered competitive intelligence platform. It filters
+> news, LinkedIn activity, job postings, and alerts into one ranked,
+> explained feed — scored through each customer's own company lens.
+> Built for competitive intelligence teams, product marketing managers,
+> business development and revenue teams, product managers, and — via
+> MiAmar HR — anyone tracking hiring and leadership signals at tracked
+> companies (CI, business development, leadership, and HR/People teams).
+
+## Product
+- [Market Intelligence](https://miamar.io/product/market-intelligence): the daily filtered, explained signal feed.
+- [MiAmar HR](https://miamar.io/product/hr): hiring surges, departures, and executive moves at tracked companies — used by CI, Business Development, leadership, and HR teams.
+- [MiAmar Field](https://miamar.io/product/field): self-updating sales battlecards and AI meeting briefs.
+
+## Solutions
+- [For CI Teams](https://miamar.io/solutions/ci-teams)
+- [For PMMs](https://miamar.io/solutions/pmm)
+- [For Business Development](https://miamar.io/solutions/business-development)
+- [For Product Managers](https://miamar.io/solutions/product-managers)
+- [For HR & Talent Teams](https://miamar.io/solutions/talent-hr)
+
+## Compare
+- [MiAmar vs. Klue and Crayon](https://miamar.io/compare/klue-crayon-alternative)
+
+## Contact
+- Demo: https://miamar.io/demo
+- Contact: https://miamar.io/contact

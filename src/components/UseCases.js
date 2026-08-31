@@ -5,32 +5,44 @@ import {
   Category as CategoryIcon,
   TrendingUp as TrendingUpIcon,
   Visibility as VisibilityIcon,
+  Groups as GroupsIcon,
   CheckCircle as CheckCircleIcon
 } from '@mui/icons-material';
 
 const personas = [
-  {
-    icon: <CampaignIcon sx={{ fontSize: 28, color: '#1e40af' }} />,
-    title: 'For PMMs',
-    color: '#eff6ff',
-    border: '#3b82f6',
-    items: [
-      'Build self-updating battlecards',
-      'Track competitor messaging & launches',
-      'Arm sales with real-time intel',
-      'Weekly CI newsletters generated automatically'
-    ]
-  },
   {
     icon: <VisibilityIcon sx={{ fontSize: 28, color: '#f59e0b' }} />,
     title: 'For CI Teams',
     color: '#fffbeb',
     border: '#f59e0b',
     items: [
-      'Ingest Google Alerts & newsletters in one place',
-      'AI filters noise — only relevant signals surface',
-      'Trending topics and emerging competitors on your radar',
+      'One ranked feed, filtered and explained',
+      'A stated reason for every rejection',
+      'Your own importance tiers, not a generic scale',
       'Source-linked intelligence summaries daily'
+    ]
+  },
+  {
+    icon: <CampaignIcon sx={{ fontSize: 28, color: '#1e40af' }} />,
+    title: 'For PMMs',
+    color: '#eff6ff',
+    border: '#3b82f6',
+    items: [
+      'Self-updating battlecards',
+      'Track competitor messaging & launches',
+      'A newsletter that writes itself',
+      'Arm sales with intel that stays current'
+    ]
+  },
+  {
+    icon: <TrendingUpIcon sx={{ fontSize: 28, color: '#7c3aed' }} />,
+    title: 'For Business Development',
+    color: '#faf5ff',
+    border: '#a855f7',
+    items: [
+      'AI meeting briefs before every call',
+      'Know each prospect\'s competitive landscape',
+      'Buying-signal detection from hiring & exec moves'
     ]
   },
   {
@@ -39,20 +51,20 @@ const personas = [
     color: '#f0fdfa',
     border: '#14b8a6',
     items: [
-      'Monitor competitor features & roadmaps',
-      'Track product releases across your arena',
-      'Prepare roadmap discussions backed by evidence'
+      'Feature & roadmap tracking, comparable',
+      'Version history behind every roadmap call',
+      'Every change linked to related events'
     ]
   },
   {
-    icon: <TrendingUpIcon sx={{ fontSize: 28, color: '#7c3aed' }} />,
-    title: 'For Revenue Teams',
-    color: '#faf5ff',
-    border: '#a855f7',
+    icon: <GroupsIcon sx={{ fontSize: 28, color: '#0891b2' }} />,
+    title: 'For HR & Talent Teams',
+    color: '#ecfeff',
+    border: '#06b6d4',
     items: [
-      'AI meeting briefs before every call',
-      'Know each prospect\'s competitive landscape',
-      'Spot buying signals early'
+      'Hiring surges & executive moves, company by company',
+      'Talent-market benchmarking against your peers',
+      'Read the same signals as CI, BD, and leadership'
     ]
   }
 ];
@@ -62,10 +74,14 @@ const UseCases = () => (
     <Container maxWidth="lg">
       <Box sx={{ textAlign: 'center', mb: 6 }}>
         <Typography variant="h2" sx={{ fontSize: { xs: '1.75rem', md: '2.25rem' }, fontWeight: 700, color: '#0f172a', mb: 2 }}>
-          Built for the teams that need to know first
+          Built for CI teams — and everyone they keep informed
+        </Typography>
+        <Typography sx={{ color: '#64748b', fontSize: '1.05rem', maxWidth: 620, mx: 'auto' }}>
+          The competitive intelligence team owns the arena. MiAmar makes it effortless to arm every team that
+          reads their signals.
         </Typography>
       </Box>
-      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(4, 1fr)' }, gap: 3 }}>
+      <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', sm: 'repeat(2, 1fr)', md: 'repeat(3, 1fr)', lg: 'repeat(5, 1fr)' }, gap: 3 }}>
         {personas.map((persona, idx) => (
           <Card key={idx} sx={{
             border: '1px solid #e2e8f0', borderRadius: 3, boxShadow: 'none',

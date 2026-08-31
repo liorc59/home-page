@@ -6,10 +6,10 @@ const FinalCTA = () => (
   <Box sx={{ py: { xs: 8, md: 10 }, background: 'linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%)' }}>
     <Container maxWidth="md" sx={{ textAlign: 'center' }}>
       <Typography variant="h2" sx={{ color: 'white', fontWeight: 700, mb: 2, fontSize: { xs: '1.75rem', md: '2.25rem' } }}>
-        Stop scrolling through alerts. Start knowing what matters.
+        Give your CI a reach the whole company feels.
       </Typography>
-      <Typography sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', mb: 5, maxWidth: 500, mx: 'auto', lineHeight: 1.7 }}>
-        Join PMM and CI teams who replaced hours of manual research with a 2-minute morning briefing.
+      <Typography sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', mb: 5, maxWidth: 560, mx: 'auto', lineHeight: 1.7 }}>
+        Own one arena, and put filtered, explained intelligence in front of every team that needs it — starting with a 2-minute morning briefing.
       </Typography>
       <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
         <Button

@@ -1,9 +1,47 @@
-# robots.txt for MiAmar
+# MiAmar — robots.txt
+# Confirmed with Eran: both AI training crawlers and AI retrieval/citation
+# crawlers are allowed. Audit any CDN/WAF-level bot rules for silent
+# overrides before treating this file as the final word.
+
+# Classic search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# AI training crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# AI real-time retrieval / answer-citation bots — do not block these,
+# they are what drive AI-assistant referral traffic
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+# Everything else
 User-agent: *
 Allow: /
 
-# Sitemaps
 Sitemap: https://miamar.io/sitemap.xml
-
-# Crawl-delay for polite crawling
-Crawl-delay: 1

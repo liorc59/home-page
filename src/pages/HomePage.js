@@ -11,6 +11,8 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import VideoSection from '../components/VideoSection';
 import PainPoints from '../components/PainPoints';
+import OrgReach from '../components/OrgReach';
+import ProductSurfaces from '../components/ProductSurfaces';
 import FeatureShowcase from '../components/FeatureShowcase';
 import CapabilitiesGrid from '../components/CapabilitiesGrid';
 import HowItWorks from '../components/HowItWorks';
@@ -27,17 +29,17 @@ const metrics = [
   { icon: <FilterAltIcon sx={{ fontSize: 28, color: '#1e40af' }} />, value: '70%+', label: 'Noise filtered automatically' },
   { icon: <TimerIcon sx={{ fontSize: 28, color: '#0d9488' }} />, value: '2 min', label: 'Daily digest read time' },
   { icon: <TrendingUpIcon sx={{ fontSize: 28, color: '#f59e0b' }} />, value: '24/7', label: 'Continuous monitoring' },
-  { icon: <VerifiedIcon sx={{ fontSize: 28, color: '#22c55e' }} />, value: '100%', label: 'Source-linked insights' },
+  { icon: <VerifiedIcon sx={{ fontSize: 28, color: '#22c55e' }} />, value: '100%', label: 'Source-linked insights*' },
 ];
 
 const HomePage = () => (
   <>
     <SEO
-      title="MiAmar | Competitive Intelligence for PMM & CI Teams"
-      description="MiAmar ingests your Google Alerts and newsletters, filters the noise, and surfaces competitive signals that matter — so PMMs and CI teams always stay ahead."
+      title="MiAmar | Competitive Intelligence, Automated for CI Teams"
+      description="MiAmar filters your Google Alerts, newsletters, and LinkedIn into one ranked, explained feed — scored through your company's own lens. The competitive intelligence system built for CI teams."
       canonicalUrl="https://miamar.io/"
       ogTitle="MiAmar — Your Competitors Just Made 3 Moves. Did You Catch Them?"
-      ogDescription="Ingests your alerts and newsletters, filters the noise, and surfaces competitive signals — built for PMM and CI teams."
+      ogDescription="One ranked, explained feed — filtered from your alerts, newsletters, and LinkedIn, scored through your company's lens. Built for Competitive Intelligence teams."
       ogUrl="https://miamar.io/"
       breadcrumbs={[{ name: "Home", url: "https://miamar.io/" }]}
     />
@@ -67,9 +69,14 @@ const HomePage = () => (
               </Box>
             ))}
           </Box>
+          <Typography sx={{ color: '#94a3b8', fontSize: '0.75rem', textAlign: 'center', mt: 3 }}>
+            * Source-linked today across Market Intelligence and MiAmar HR.
+          </Typography>
         </Container>
       </Box>
+      <OrgReach />
       <Differentiators />
+      <ProductSurfaces />
       <ExampleInsight />
       <FeatureShowcase />
       <CapabilitiesGrid />

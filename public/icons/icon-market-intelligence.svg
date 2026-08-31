@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>Market Intelligence icon</title>
+  <!-- Market Intelligence: a filtered signal feed -->
+  <rect x="6" y="8" width="36" height="32" rx="6" stroke="#1e40af" stroke-width="2"/>
+  <path d="M12 18h10" stroke="#1e40af" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 24h18" stroke="#0d9488" stroke-width="2" stroke-linecap="round"/>
+  <path d="M12 30h13" stroke="#1e40af" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="34" cy="18" r="2" fill="#0d9488"/>
+</svg>

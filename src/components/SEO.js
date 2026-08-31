@@ -7,7 +7,8 @@ const SEO = ({
   ogTitle,
   ogDescription,
   ogUrl,
-  breadcrumbs
+  breadcrumbs,
+  schema
 }) => {
   useEffect(() => {
     // Update title
@@ -84,14 +85,33 @@ const SEO = ({
       });
     }
 
+    // Extra page-level structured data (e.g. SoftwareApplication on product
+    // pages). `schema` is one object or an array of schema.org objects.
+    if (schema) {
+      const items = Array.isArray(schema) ? schema : [schema];
+      const extraId = 'page-jsonld';
+      let script = document.getElementById(extraId);
+      if (!script) {
+        script = document.createElement('script');
+        script.id = extraId;
+        script.type = 'application/ld+json';
+        document.head.appendChild(script);
+      }
+      script.textContent = JSON.stringify(items.length === 1 ? items[0] : items);
+    }
+
     // Cleanup function
     return () => {
       const breadcrumbScript = document.getElementById('breadcrumb-jsonld');
       if (breadcrumbScript) {
         breadcrumbScript.remove();
       }
+      const pageScript = document.getElementById('page-jsonld');
+      if (pageScript) {
+        pageScript.remove();
+      }
     };
-  }, [title, description, canonicalUrl, ogTitle, ogDescription, ogUrl, breadcrumbs]);
+  }, [title, description, canonicalUrl, ogTitle, ogDescription, ogUrl, breadcrumbs, schema]);
 
   return null;
 };

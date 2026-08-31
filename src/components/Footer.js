@@ -16,23 +16,23 @@ const Footer = () => (
             Product
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.75 }}>
-            <Link href="#platform" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Platform</Link>
-            <Link href="#platform" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Event Intelligence</Link>
-            <Link href="#platform" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Battlecards</Link>
-            <Link href="https://miamar.io/meeting_prep" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Meeting Prep</Link>
-            <Link href="#platform" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Integrations</Link>
+            <Link component={RouterLink} to="/product/market-intelligence" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Market Intelligence</Link>
+            <Link component={RouterLink} to="/product/hr" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>MiAmar HR</Link>
+            <Link component={RouterLink} to="/product/field" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>MiAmar Field</Link>
           </Box>
         </Box>
 
-        {/* Use Cases */}
+        {/* Solutions */}
         <Box>
           <Typography variant="subtitle2" sx={{ color: 'white', fontWeight: 600, mb: 1.5, fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: 1 }}>
-            Use Cases
+            Solutions
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.75 }}>
-            <Link href="#use-cases" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For PMMs</Link>
-            <Link href="#use-cases" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For PMs</Link>
-            <Link href="#use-cases" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For Revenue</Link>
+            <Link component={RouterLink} to="/solutions/ci-teams" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For CI Teams</Link>
+            <Link component={RouterLink} to="/solutions/pmm" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For PMMs</Link>
+            <Link component={RouterLink} to="/solutions/business-development" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For Business Development</Link>
+            <Link component={RouterLink} to="/solutions/product-managers" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For Product Managers</Link>
+            <Link component={RouterLink} to="/solutions/talent-hr" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>For HR &amp; Talent Teams</Link>
           </Box>
         </Box>
 
@@ -42,8 +42,11 @@ const Footer = () => (
             Company
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.75 }}>
-            <Link href="#demo" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Get Started</Link>
-            <Link href="mailto:info@miamar.io" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>info@miamar.io</Link>
+            <Link component={RouterLink} to="/about" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>About</Link>
+            <Link component={RouterLink} to="/contact" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Contact</Link>
+            <Link component={RouterLink} to="/compare/klue-crayon-alternative" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Compare</Link>
+            <Link component={RouterLink} to="/resources" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Resources</Link>
+            <Link component={RouterLink} to="/pricing" underline="hover" sx={{ color: '#94a3b8', fontSize: '0.9rem', '&:hover': { color: 'white' } }}>Pricing</Link>
           </Box>
         </Box>
 

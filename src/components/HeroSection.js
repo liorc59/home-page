@@ -36,6 +36,20 @@ const HeroSection = () => {
     }}>
       <Container maxWidth="lg">
         <Box sx={{ textAlign: 'center', mb: { xs: 5, md: 7 } }}>
+          <Typography sx={{
+            display: 'inline-block',
+            color: '#0d9488',
+            fontWeight: 700,
+            fontSize: { xs: '0.8rem', md: '0.9rem' },
+            letterSpacing: '0.04em',
+            textTransform: 'uppercase',
+            mb: 2,
+            px: 1.5, py: 0.5,
+            borderRadius: 5,
+            bgcolor: '#f0fdfa',
+          }}>
+            Built for Competitive Intelligence teams.
+          </Typography>
           <Typography variant="h1" sx={{
             fontSize: { xs: '2.2rem', sm: '2.75rem', md: '3.5rem' },
             fontWeight: 800,
@@ -58,8 +72,8 @@ const HeroSection = () => {
             maxWidth: 680,
             mx: 'auto'
           }}>
-            MiAmar ingests your Google Alerts and newsletters, filters the noise automatically,
-            and surfaces what's actually happening in your competitive arena — so PMMs and CI teams always stay ahead.
+            MiAmar filters your alerts, newsletters, and LinkedIn into one ranked, explained feed — scored
+            through your company's own lens. The CI system your whole org reads.
           </Typography>
           <Box sx={{ display: 'flex', gap: 2, justifyContent: 'center', flexWrap: 'wrap' }}>
             <Button
@@ -168,7 +182,7 @@ const HeroSection = () => {
         {/* Trust bar */}
         <Box sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: { xs: 2, md: 4 }, flexWrap: 'wrap', opacity: 0.7 }}>
           <Typography sx={{ color: '#64748b', fontSize: '0.9rem', fontWeight: 500 }}>
-            Built for PMM & Competitive Intelligence teams
+            Built for Competitive Intelligence teams
           </Typography>
           <Box sx={{ display: 'flex', gap: 2 }}>
             <CampaignIcon sx={{ color: '#94a3b8', fontSize: 20 }} />
